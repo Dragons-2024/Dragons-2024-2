@@ -10,6 +10,7 @@ const productosDestacados = [
     precioDescuento: 2879920,
     descuento: "20",
     imagen: "/Dragons-2024-2/src/assets/productos-destacados/destacado1.jpeg",
+    slug: "/Dragons-2024-2/",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const productosDestacados = [
     precioDescuento: 4199920,
     descuento: "15",
     imagen: "/Dragons-2024-2/src/assets/productos-destacados/destacado2.png",
+    slug: "/Dragons-2024-2/",
   },
 
   {
@@ -27,6 +29,7 @@ const productosDestacados = [
     precioDescuento: 4199920,
     descuento: "15",
     imagen: "/img/productos-destacados/destacado2.j",
+    slug: "/Dragons-2024-2/",
   },
 
   {
@@ -36,6 +39,7 @@ const productosDestacados = [
     precioDescuento: 4199920,
     descuento: "15",
     imagen: "/img/productos-destacados/destacado2.j",
+    slug: "/Dragons-2024-2/",
   },
 
   {
@@ -45,6 +49,7 @@ const productosDestacados = [
     precioDescuento: 4199920,
     descuento: "15",
     imagen: "/img/productos-destacados/destacado2.j",
+    slug: "/Dragons-2024-2/",
   },
   // Más productos...
 ];
