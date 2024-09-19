@@ -15,8 +15,8 @@ interface ProductoDestacadoProps {
 const ProductoDestacado: React.FC<ProductoDestacadoProps> = ({ imagen, nombre, precioNormal, precioDescuento, descuento, slug }) => {
   return (
     <Link to={`${slug}`} className="no-underline">
-    <div className="font-poppins bg-white p-4 rounded-lg text-center shadow-lg flex flex-col justify-between min-h-[300px] w-full sm:w-[300px] md:w-[250px] lg:w-[300px] mx-auto">
-    <div className='flex-grow'>
+    <div className="font-poppins bg-white p-4 rounded-lg text-center shadow-lg flex flex-col  justify-between flex-grow min-h-[400px] w-full sm:w-[300px] md:w-[250px] lg:w-[300px] mx-auto transition-transform transform hover:scale-105 hover:shadow-xl">
+    <div >
       <img 
         src={imagen} 
         alt={nombre} 
