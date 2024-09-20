@@ -8,5 +8,5 @@ export const PromoImages=[
 ]
 
 export const NewPromoImage = {
-  id: 3, img: PromoImg3,alt: "Promo Laptop",
+  id: 3, img: PromoImg3,alt: "Promo Black Friday",
 };
