@@ -1,16 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
-interface FeaturedProductProps {
-  image: string;
-  name: string;
-  normalPrice: number;
-  discountPrice: number;
-  discount: string;
-  slug: string;
-}
-
+import { FeaturedProductProps } from '../core/interfaces/FeaturedProductsInter';
 
 const FeaturedProduct: React.FC<FeaturedProductProps> = ({ image, name, normalPrice, discountPrice, discount, slug }) => {
   return (

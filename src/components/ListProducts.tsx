@@ -1,18 +1,7 @@
 
 import React from 'react';
 import FeaturedProduct from './FeaturedProducts';
-
-interface FeaturedProductsListProps {
-  products: {
-    id: number;
-    name: string;
-    normalPrice: number;
-    discountPrice: number;
-    discount: string;
-    image: string;
-    slug: string;
-  }[];
-}
+import { FeaturedProductsListProps } from '../core/interfaces/FeaturedProductsInter';
 
 const FeaturedProductsList: React.FC<FeaturedProductsListProps> = ({ products }) => {
   return (
