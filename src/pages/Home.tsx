@@ -11,7 +11,7 @@ export function Home() {
       <section>
         <section className="w-full h-auto overflow-hidden">
         {PromoImages.map((image)=>(
-            <PromotionalImage img={image.img} alt={image.alt} />
+            <PromotionalImage key={image.id} img={image.img} alt={image.alt} />
           ))}
         </section>
       </section>
