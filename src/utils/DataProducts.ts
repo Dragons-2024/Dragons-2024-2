@@ -1,3 +1,17 @@
+import Destacado1 from "../assets/productos-destacados/destacado1.jpeg";
+import Destacado2 from "../assets/productos-destacados/destacado2.png";
+import Destacado3 from "../assets/productos-destacados/destacado3.png";
+import Destacado4 from "../assets/productos-destacados/destacado4.png";
+import Destacado5 from "../assets/productos-destacados/destacado5.png";
+import Destacado6 from "../assets/productos-destacados/destacado6.png";
+import Destacado7 from "../assets/productos-destacados/destacado7.png";
+import Destacado8 from "../assets/productos-destacados/destacado8.png";
+import Destacado9 from "../assets/productos-destacados/destacado9.png";
+import Destacado10 from "../assets/productos-destacados/destacado10.png";
+import Destacado11 from "../assets/productos-destacados/destacado11.png";
+import Destacado12 from "../assets/productos-destacados/destacado12.png";
+
+
 export const featuredProducts = [
   {
     id: 1,
@@ -5,7 +19,7 @@ export const featuredProducts = [
     normalPrice: 3599900,
     discountPrice: 2879920,
     discount: "20",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado1.jpeg",
+    image: Destacado1,
     slug: "/Dragons-2024-2/",
   },
   {
@@ -14,7 +28,7 @@ export const featuredProducts = [
     normalPrice: 6499000,
     discountPrice: 3199000,
     discount: "50",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado2.png",
+    image: Destacado2,
     slug: "/Dragons-2024-2/",
   },
 
@@ -24,7 +38,7 @@ export const featuredProducts = [
     normalPrice: 6559000,
     discountPrice: 5903100,
     discount: "10",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado3.png",
+    image: Destacado3,
     slug: "/Dragons-2024-2/",
   },
 
@@ -34,7 +48,7 @@ export const featuredProducts = [
     normalPrice: 3399000,
     discountPrice: 3059100,
     discount: "10",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado4.png",
+    image: Destacado4,
     slug: "/Dragons-2024-2/",
   },
 
@@ -44,7 +58,7 @@ export const featuredProducts = [
     normalPrice: 4999900,
     discountPrice: 3999200,
     discount: "20",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado5.png",
+    image: Destacado5,
     slug: "/Dragons-2024-2/",
   },
 
@@ -54,7 +68,7 @@ export const featuredProducts = [
     normalPrice: 3039900,
     discountPrice: 2431920,
     discount: "20",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado6.png",
+    image: Destacado6,
     slug: "/Dragons-2024-2/",
   },
 
@@ -64,7 +78,7 @@ export const featuredProducts = [
     normalPrice: 8993900,
     discountPrice: 8094510,
     discount: "10",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado7.png",
+    image: Destacado7,
     slug: "/Dragons-2024-2/",
   },
 
@@ -74,7 +88,7 @@ export const featuredProducts = [
     normalPrice: 23380000,
     discountPrice: 11690000,
     discount: "50",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado8.png",
+    image: Destacado8,
     slug: "/Dragons-2024-2/",
   },
 
@@ -84,7 +98,7 @@ export const featuredProducts = [
     normalPrice: 3900400,
     discountPrice: 3705380,
     discount: "5",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado9.png",
+    image: Destacado9,
     slug: "/Dragons-2024-2/",
   },
 
@@ -94,7 +108,7 @@ export const featuredProducts = [
     normalPrice: 7140000,
     discountPrice: 6426000,
     discount: "10",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado10.png",
+    image: Destacado10,
     slug: "/Dragons-2024-2/",
   },
 
@@ -104,7 +118,7 @@ export const featuredProducts = [
     normalPrice: 14999000,
     discountPrice: 10499000,
     discount: "30",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado11.png",
+    image: Destacado11,
     slug: "/Dragons-2024-2/",
   },
 
@@ -114,7 +128,7 @@ export const featuredProducts = [
     normalPrice: 11499000,
     discountPrice: 8899000,
     discount: "25",
-    image: "/Dragons-2024-2/src/assets/productos-destacados/destacado12.png",
+    image: Destacado12,
     slug: "/Dragons-2024-2/",
   },
 
