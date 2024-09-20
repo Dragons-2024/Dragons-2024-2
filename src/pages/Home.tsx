@@ -1,8 +1,9 @@
-import { PromotionalImage } from "../components/PromotionalImages";
 import { Main } from "../layout/Main";
 import FeaturedProductsList from "../components/ListProducts"; // Ruta correcta para el componente
 import { featuredProducts } from "../utils/DataProducts";
+import { PromotionalImages } from "../components/PromoImages";
 import { PromoImages } from "../utils/PromotionalImgData";
+
 
 
 export function Home() {
@@ -10,9 +11,7 @@ export function Home() {
     <Main>
       <section>
         <section className="w-full h-auto overflow-hidden">
-        {PromoImages.map((image)=>(
-            <PromotionalImage key={image.id} img={image.img} alt={image.alt} />
-          ))}
+        <PromotionalImages imgs={PromoImages}/>
         </section>
       </section>
       <section className="mb-8">
