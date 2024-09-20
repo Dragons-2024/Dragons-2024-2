@@ -1,5 +1,6 @@
+import { PromotionalImage } from "../components/PromotionalImages";
 import { Main } from "../layout/Main";
-import { promo_images } from "../utils/promotional_img_data";
+import { PromoImages } from "../utils/PromotionalImgData";
 
 export function Home() {
   return (
@@ -8,8 +9,8 @@ export function Home() {
         <h2>Home</h2>
         <p>Welcome to the Dragons website.</p>
         <section className="w-full h-auto overflow-hidden">
-          {promo_images.map((image)=>(
-            <img key={image.id} src={image.img} alt={image.alt} />
+          {PromoImages.map((image)=>(
+            <PromotionalImage img={image.img} alt={image.alt} />
           ))}
         </section>
       </section>
