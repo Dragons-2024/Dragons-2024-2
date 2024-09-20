@@ -2,7 +2,7 @@ import { Main } from "../layout/Main";
 import FeaturedProductsList from "../components/ListProducts"; // Ruta correcta para el componente
 import { featuredProducts } from "../utils/DataProducts";
 import { PromotionalImages } from "../components/PromoImages";
-import { PromoImages } from "../utils/PromotionalImgData";
+import { PromoImages, NewPromoImage } from "../utils/PromotionalImgData";
 
 
 
@@ -18,6 +18,9 @@ export function Home() {
         <h2 className="px-5 py-5 font-poppins text-2xl text-center font-semibold mb-4">Productos Destacados</h2>
         <FeaturedProductsList products={featuredProducts} />
         </section>
+        <section className="mt-8">
+        <PromotionalImages imgs={[NewPromoImage]} /> 
+      </section>
     </Main>
   );
 }
