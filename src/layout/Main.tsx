@@ -2,7 +2,7 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { SubHeader } from "../components/Subheader";
 
-const Main = ({ children }) => {
+export const Main = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -16,5 +16,3 @@ const Main = ({ children }) => {
     </>
   );
 };
-
-export default Main;
