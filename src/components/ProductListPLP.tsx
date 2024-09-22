@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ProductGrid from './ProductGrid';
 import computadora1 from '../assets/computadores/computadora1.jpg';
 import computadora2 from '../assets/computadores/computadora2.jpg';
 import computadora3 from '../assets/computadores/computadora3.jpg';
@@ -122,12 +123,12 @@ const ProductListPLP = () => {
 
   return (
     <div className="flex flex-col md:flex-row">
-      <aside className="w-full md:w-1 xl:w-1 p-1">
+      <aside className="w-full md:w-1 xl:w-1 p-">
         {/* Aquí puedes agregar contenido adicional para el aside */}
       </aside>
-      <section className="w-full md:w-3/0 xl:w-4/0 p-4 md:ml">
+      <section className="w-full md:w-3/4 xl:w-4/5 p- md:ml">
         <div className="list-header flex justify-between items-center mb-4">
-          <span>Mostrando {sortedProducts.length} resultados de {products.length}</span>
+          <span>Mostrando {sortedProducts.length} resultados de 35</span>
           <div className="flex space-x-4">
             <select className="border border-gray-300 rounded p-2" onChange={handleSortChange}>
               <option value="rating">Ordenar por Calificación</option>
@@ -136,7 +137,7 @@ const ProductListPLP = () => {
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
           {sortedProducts.map((product, index) => (
             <ProductItem
               key={index}
