@@ -2,7 +2,10 @@ import React from 'react';
 
 const FilterBox: React.FC = () => {
   return (
-    <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
+    <div
+      className="filter-box border border-gray-200 rounded p-4 mb-4 transition-shadow duration-300 hover:shadow-lg bg-white"
+      style={{ boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.2)' }}
+    >
       <h2 className="text-xl font-semibold mb-4">Filtrar por</h2>
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Marca</h3>
@@ -37,7 +40,7 @@ const FilterBox: React.FC = () => {
         <label className="block"><input type="checkbox" className="mr-2" /> $5.500.000 - $7.500.000 (6)</label>
         <label className="block"><input type="checkbox" className="mr-2" /> $7.500.000 - $11.500.000 (5)</label>
       </div>
-    </aside>
+    </div>
   );
 };
 
