@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Main} from '../layout/Main';
+import { Main } from '../layout/Main';
 import ProductGrid from './ProductGrid';
 import computadora1 from '../assets/computadores/computadora1.jpg';
 import computadora2 from '../assets/computadores/computadora2.jpg';
@@ -14,6 +14,7 @@ import computadora10 from '../assets/computadores/computadora10.jpg';
 import ProductItem from './ProductItem';
 import FilterBox from './FilterBox'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
+
 const products = [
   {
     img: computadora1,
@@ -129,46 +130,42 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-    <div className="flex flex-col md:flex-row">
-    <aside className="md:w-1/4 xl:w-1/5 sticky top-0 left-0 p-4 md:p-6 lg:p-8 xl:p-10">
-  <FilterBox />
-</aside>
-      <aside className="w-full md:w-1 xl:w-1 p-">
-        {/* Aquí puedes agregar contenido adicional para el aside */}
-      </aside>
-      <section className="w-full md:w-3/4 xl:w-4/5 p- md:ml">
-      <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-  <span>Mostrando {sortedProducts.length} resultados de 35</span>
-  <div className="flex space-x-4 mt-2 md:mt-0">
-    <select className="border border-gray-300 rounded p-2" onChange={handleSortChange}>
-      <option value="default">Ordenar por Defecto</option>
-      <option value="rating">Ordenar por Calificación</option>
-      <option value="priceAsc">Ordenar por Precio: Menor a Mayor</option>
-      <option value="priceDesc">Ordenar por Precio: Mayor a Menor</option>
-      <option value="discount">Ordenar por Mayor Descuento</option>
-    </select>
+      <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
+        <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
+          <FilterBox />
+        </aside>
+        <section className="w-full md:w-3/4 p-4">
+          <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <span className="text-sm md:text-base">Mostrando {sortedProducts.length} resultados de 35</span>
+            <div className="flex space-x-4 mt-2 md:mt-0">
+              <select className="border border-gray-300 rounded p-2 text-sm md:text-base" onChange={handleSortChange}>
+                <option value="default">Ordenar por Defecto</option>
+                <option value="rating">Ordenar por Calificación</option>
+                <option value="priceAsc">Ordenar por Precio: Menor a Mayor</option>
+                <option value="priceDesc">Ordenar por Precio: Mayor a Menor</option>
+                <option value="discount">Ordenar por Mayor Descuento</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div className="grid grid-cols-1 gap-4">
-          {sortedProducts.map((product, index) => (
-            <ProductItem
-              key={index}
-              img={product.img}
-              name={product.name}
-              rating={product.rating}
-              features={product.features}
-              normalPrice={product.normalPrice}
-              discountedPrice={product.discountedPrice}
-            />
-          ))}
-        </div>
-      </section>
-    </div>
-     {/* Agrega el banner aquí */}
-     <div className="w-full p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {sortedProducts.map((product, index) => (
+              <ProductItem
+                key={index}
+                img={product.img}
+                name={product.name}
+                rating={product.rating}
+                features={product.features}
+                normalPrice={product.normalPrice}
+                discountedPrice={product.discountedPrice}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+      {/* Agrega el banner aquí */}
+      <div className="w-full p-4">
         <img src={promo4} alt="Promotional Banner" className="w-full h-auto rounded-lg" />
       </div>
     </Main>
   );
 };
-
