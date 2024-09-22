@@ -13,7 +13,7 @@ import computadora9 from '../assets/computadores/computadora9.jpg';
 import computadora10 from '../assets/computadores/computadora10.jpg';
 import ProductItem from './ProductItem';
 import FilterBox from './FilterBox'; // Importa el componente FilterBox
-
+import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 const products = [
   {
     img: computadora1,
@@ -164,6 +164,10 @@ export const ProductListPLP = () => {
         </div>
       </section>
     </div>
+     {/* Agrega el banner aquí */}
+     <div className="w-full p-4">
+        <img src={promo4} alt="Promotional Banner" className="w-full h-auto rounded-lg" />
+      </div>
     </Main>
   );
 };
