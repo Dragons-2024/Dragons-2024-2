@@ -132,7 +132,7 @@ const ProductListPLP = () => {
       </aside>
       <section className="w-full md:w-3/4 xl:w-4/5 p- md:ml">
       <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-  <span>Mostrando {sortedProducts.length} resultados de {products.length}</span>
+  <span>Mostrando {sortedProducts.length} resultados de 35</span>
   <div className="flex space-x-4 mt-2 md:mt-0">
     <select className="border border-gray-300 rounded p-2" onChange={handleSortChange}>
       <option value="default">Ordenar por Defecto</option>
