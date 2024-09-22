@@ -1,17 +1,17 @@
-// src/layout/Main.tsx
 import React from 'react';
 import Footer from '../components/Footer'; // Importación corregida
+import Header from '../components/Header'; // Asegúrate de que este componente exista
 
-const Main = ({ children }) => {
+export const Main: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div>
-      <header>
-        <h1>Header content</h1>
-      </header>
-      <main>{children}</main>
+    <div className="flex flex-col min-h-screen">
+      <Header /> {/* Uso del componente Header */}
+      <main className="flex-grow text-2xl bg-[#F5F5F5] text-[#555555]">
+        {children}
+      </main>
       <Footer /> {/* Uso del componente Footer */}
     </div>
   );
 };
 
-export default Main;
+export default Main; // Asegúrate de exportar el componente
