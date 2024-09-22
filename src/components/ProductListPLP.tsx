@@ -12,6 +12,7 @@ import computadora8 from '../assets/computadores/computadora8.jpg';
 import computadora9 from '../assets/computadores/computadora9.jpg';
 import computadora10 from '../assets/computadores/computadora10.jpg';
 import ProductItem from './ProductItem';
+import FilterBox from './FilterBox'; // Importa el componente FilterBox
 
 const products = [
   {
@@ -129,6 +130,9 @@ export const ProductListPLP = () => {
   return (
     <Main>
     <div className="flex flex-col md:flex-row">
+    <aside className="md:w-1/4 xl:w-1/5 sticky top-0 left-0 p-4 md:p-6 lg:p-8 xl:p-10">
+  <FilterBox />
+</aside>
       <aside className="w-full md:w-1 xl:w-1 p-">
         {/* Aquí puedes agregar contenido adicional para el aside */}
       </aside>
