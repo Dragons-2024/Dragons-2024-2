@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Main} from '../layout/Main';
 import ProductGrid from './ProductGrid';
 import computadora1 from '../assets/computadores/computadora1.jpg';
 import computadora2 from '../assets/computadores/computadora2.jpg';
@@ -103,7 +104,7 @@ const products = [
   }
 ];
 
-const ProductListPLP = () => {
+export const ProductListPLP = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -126,6 +127,7 @@ const ProductListPLP = () => {
   });
 
   return (
+    <Main>
     <div className="flex flex-col md:flex-row">
       <aside className="w-full md:w-1 xl:w-1 p-">
         {/* Aquí puedes agregar contenido adicional para el aside */}
@@ -158,7 +160,7 @@ const ProductListPLP = () => {
         </div>
       </section>
     </div>
+    </Main>
   );
 };
 
-export default ProductListPLP;
