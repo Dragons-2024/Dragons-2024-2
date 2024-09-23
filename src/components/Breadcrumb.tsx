@@ -14,9 +14,9 @@ type breaditem={
 
 export function Breadcrumb({blinks}:breadcrumbPropsType){
    return(
-      <div className="m-5 text-sm md:text-lg">
+      <div className="m-5 text-sm md:text-lg 2xl:text-2xl">
          <Link className="text-[#0073e6] no-underline hover:underline" 
-         to="/Dragons-2024-2/">Inicio</Link>
+         to="/">Inicio</Link>
          {blinks?.map((links)=>(
            <>
               {" "}&gt; <Link key={links.id} to={links.link ? "#": `/${links.link}`} 

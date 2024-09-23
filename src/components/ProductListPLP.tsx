@@ -15,6 +15,7 @@ import FilterBox from './FilterBox'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
+import { useLocation } from 'react-router-dom';
 
 const products = [
   {
