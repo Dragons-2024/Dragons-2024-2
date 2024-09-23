@@ -3,12 +3,15 @@ import FeaturedProductsList from "../components/ListProducts"; // Ruta correcta 
 import { featuredProducts } from "../utils/DataProducts";
 import { PromotionalImages } from "../components/PromoImages";
 import { PromoImages, NewPromoImage } from "../utils/PromotionalImgData";
-
+import { Breadcrumb } from "../components/Breadcrumb";
+import { BreadcrumbLinks, HomeBreadcrumb } from "../utils/BreadcrumbData";
 
 
 export function Home() {
+  HomeBreadcrumb();
   return (
     <Main>
+      <Breadcrumb blinks={BreadcrumbLinks}/>
       <section>
         <section className="w-full h-auto overflow-hidden">
         <PromotionalImages imgs={PromoImages}/>

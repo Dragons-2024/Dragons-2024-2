@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { categories } from "../core/interfaces/categories";
 import { FaBars } from "react-icons/fa"; // Icono de menú tipo hamburguesa
+import { Link } from "react-router-dom";
 export const SubHeader: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState<number | null>(null);
     const [menuOpen, setMenuOpen] = useState(false); // Estado del menú hamburguesa
@@ -46,12 +47,13 @@ export const SubHeader: React.FC = () => {
                 >
                   {category.subcategories.map((subcategory, subIndex) => (
                     <li key={subIndex}>
-                      <a
-                        href={subcategory.link}
-                        className="font-poppins text-gray-700 hover:text-blue-600 block"
+                     <Link
+                        to={subcategory.link}
+                        state={{name:subcategory.name,link:subcategory.link}}
+                        className="text-gray-700 hover:text-blue-600 block"
                       >
                         {subcategory.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
