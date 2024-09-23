@@ -7,7 +7,7 @@ import amex from "../assets/americanexpress.png"
 
 export function Footer() {
     return (
-        <footer className="bg-[#1E2759] text-white p-8">
+        <footer className="font-poppins bg-[#1E2759] text-white p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className=" bg-[#2E3A69] p-4 rounded-md text-center">
             <h3 className="text-lg font-bold">Magister</h3>
@@ -56,8 +56,8 @@ export function Footer() {
         </div>
         <div className="border-t border-[#4A5FD9] mt-4 pt-4 flex flex-col md:flex-row justify-center gap-6">
           <ul className="space-y-2 text-center">
-            <li><a href="#" className="hover:text-[#647dec]">Inicio</a></li>
-            <li><a href="#" className="hover:text-[#647dec]">Computadores</a></li>
+            <li><a href="/Dragons-2024-2/" className="hover:text-[#647dec]">Inicio</a></li>
+            <li><a href="/Dragons-2024-2/plp" className="hover:text-[#647dec]">Computadores</a></li>
             <li><a href="#" className="hover:text-[#647dec]">Carrito</a></li>
           </ul>
           <ul className="space-y-2 text-center">

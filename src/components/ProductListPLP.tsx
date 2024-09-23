@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-import ProductGrid from './ProductGrid';
 import computadora1 from '../assets/computadores/computadora1.jpg';
 import computadora2 from '../assets/computadores/computadora2.jpg';
 import computadora3 from '../assets/computadores/computadora3.jpg';
@@ -14,7 +13,6 @@ import computadora10 from '../assets/computadores/computadora10.jpg';
 import ProductItem from './ProductItem';
 import FilterBox from './FilterBox'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
-import { useLocation } from 'react-router-dom';
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 
@@ -109,14 +107,13 @@ const products = [
   }
 ];
 
-
-
 export const ProductListPLP = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location=useLocation();
   const {name,link}:itemprops= location.state;
   CategoryLink({name,link:"#"});
   let arraylinks=plpBreadCrumb({name,link});
+
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
   };

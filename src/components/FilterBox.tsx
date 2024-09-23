@@ -3,7 +3,7 @@ import React from 'react';
 const FilterBox: React.FC = () => {
   return (
     <div
-      className="filter-box border border-gray-200 rounded p-4 mb-4 transition-shadow duration-300 hover:shadow-lg bg-white"
+      className="font-poppins filter-box border border-gray-200 rounded p-4 mb-4 transition-shadow duration-300 hover:shadow-lg bg-white"
       style={{ boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.2)' }}
     >
       <h2 className="text-base md:text-lg font-semibold mb-4">Filtrar por</h2> {/* Cambiado de text-lg a text-base en móviles */}

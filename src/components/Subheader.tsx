@@ -17,7 +17,7 @@ export const SubHeader: React.FC = () => {
     return (
       <section className="bg-gray-200 py-4 px-8">
         {/* Menú para móviles */}
-        <div className="flex justify-between items-center md:hidden">
+        <div className="font-poppins flex justify-between items-center md:hidden">
           <h2 className="text-lg font-bold">Menú</h2>
           <button className="text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
             <FaBars />
@@ -26,28 +26,28 @@ export const SubHeader: React.FC = () => {
   
         {/* Menú de categorías dinámico */}
         <nav
-          className={`md:flex md:space-x-8 mt-4 ${menuOpen ? "block" : "hidden"} md:block`}
+          className={`font-poppins md:flex md:space-x-8 mt-4 ${menuOpen ? "block" : "hidden"} md:block`}
         >
-          <ul className="md:flex md:space-x-8">
+          <ul className="font-poppins md:flex md:space-x-8">
             {categories.map((category, index) => (
               <li key={index} className="relative">
                 {/* Botón de categoría */}
                 <button
                   onClick={() => handleCategoryClick(index)}
-                  className="font-semibold text-left w-full md:w-auto"
+                  className="font-poppins font-semibold text-left w-full md:w-auto"
                 >
                   {category.name}
                 </button>
   
                 {/* Subcategorías (aparecen debajo en móviles y como dropdown en desktop) */}
                 <ul
-                  className={`rounded-lg mt-2 space-y-2 md:absolute md:top-full md:left-0 md:mt-0 md:ml-2 p-4 bg-white shadow-lg ${
+                  className={`font-poppins rounded-lg mt-2 space-y-2 md:absolute md:top-full md:left-0 md:mt-0 md:ml-2 p-4 bg-white shadow-lg ${
                     activeCategory === index ? "block" : "hidden"
                   }`}
                 >
                   {category.subcategories.map((subcategory, subIndex) => (
                     <li key={subIndex}>
-                      <Link
+                     <Link
                         to={subcategory.link}
                         state={{name:subcategory.name,link:subcategory.link}}
                         className="text-gray-700 hover:text-blue-600 block"

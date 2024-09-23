@@ -5,13 +5,15 @@ import { ProductListPLP } from '../components/ProductListPLP';
 
 export const router = createBrowserRouter([
   {
-    path: "/Dragons-2024-2/",
+    path: "/",
     element: <Home />,
     errorElement: <div>404 Not Found</div>, 
   },
   {
-    path: "/Dragons-2024-2/Plp",
+    path: "/Plp",
     element: <ProductListPLP />,
     errorElement: <div>404 Not Found</div>,
   }
-]);
+], {
+  basename: "/Dragons-2024-2"
+});
