@@ -3,7 +3,7 @@ export const categories = [
     {
       name: "Tecnología",
       subcategories: [
-        { name: "Computadores", link: "/plp" },
+        { name: "Computadores", link: "/plp2" },
         { name: "Televisores", link: "#" },
         { name: "Audio", link: "#" },
         { name: "Video", link: "#" },

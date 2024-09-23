@@ -15,18 +15,18 @@ export const SubHeader: React.FC = () => {
     };
   
     return (
-      <section className="bg-gray-200 py-4 px-8">
+      <section className="bg-[#1E2759] py-2 px-8">
         {/* Menú para móviles */}
         <div className="font-poppins flex justify-between items-center md:hidden">
-          <h2 className="text-lg font-bold">Menú</h2>
-          <button className="text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+          <h2 className="text-white text-lg font-bold">Menú</h2>
+          <button className="text-2xl text-white" onClick={() => setMenuOpen(!menuOpen)}>
             <FaBars />
           </button>
         </div>
   
         {/* Menú de categorías dinámico */}
         <nav
-          className={`font-poppins md:flex md:space-x-8 mt-4 ${menuOpen ? "block" : "hidden"} md:block`}
+          className={`font-poppins text-white md:flex md:space-x-8 mt-4 ${menuOpen ? "block" : "hidden"} md:block`}
         >
           <ul className="font-poppins md:flex md:space-x-8">
             {categories.map((category, index) => (
