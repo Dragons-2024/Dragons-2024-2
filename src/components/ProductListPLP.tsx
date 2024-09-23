@@ -14,6 +14,9 @@ import computadora10 from '../assets/computadores/computadora10.jpg';
 import ProductItem from './ProductItem';
 import FilterBox from './FilterBox'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
+import { useLocation } from 'react-router-dom';
+import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
+import { Breadcrumb } from './Breadcrumb';
 
 const products = [
   {
@@ -106,9 +109,14 @@ const products = [
   }
 ];
 
+
+
 export const ProductListPLP = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-
+  const location=useLocation();
+  const {name,link}:itemprops= location.state;
+  CategoryLink({name,link:"#"});
+  let arraylinks=plpBreadCrumb({name,link});
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
   };
@@ -130,6 +138,7 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
+      <Breadcrumb blinks={arraylinks}/>
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
           <FilterBox />
