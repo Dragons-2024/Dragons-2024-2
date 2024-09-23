@@ -7,7 +7,7 @@ import amex from "../assets/americanexpress.png"
 
 export function Footer() {
     return (
-        <footer className="bg-[#1E2759] text-white p-8">
+        <footer className="font-poppins bg-[#1E2759] text-white p-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className=" bg-[#2E3A69] p-4 rounded-md text-center">
             <h3 className="text-lg font-bold">Magister</h3>
