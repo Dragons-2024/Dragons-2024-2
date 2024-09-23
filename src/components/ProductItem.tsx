@@ -16,7 +16,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ img, name, rating, features, 
     <div
       className="font-poppins product-item border border-gray-200 rounded p-4 mb-4 transition-shadow duration-300 hover:shadow-lg flex flex-col items-center text-center bg-white"
     >
-      <a href="./pdp.html">
+      <a href="#">
         <img src={img} alt={name} className="max-h-48 max-w-full object-contain mb-4 mx-auto" />
         <h3 className="text-lg font-semibold mb-2">{name}</h3>
         <p className="text-lg rating flex items-center justify-center mb-2">
