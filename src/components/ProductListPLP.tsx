@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-import ProductGrid from './ProductGrid';
 import computadora1 from '../assets/computadores/computadora1.jpg';
 import computadora2 from '../assets/computadores/computadora2.jpg';
 import computadora3 from '../assets/computadores/computadora3.jpg';

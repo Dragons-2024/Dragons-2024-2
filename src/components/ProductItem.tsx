@@ -8,6 +8,7 @@ interface ProductItemProps {
   features: string;
   normalPrice: string;
   discountedPrice: string;
+  description?:string;
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ img, name, rating, features, normalPrice, discountedPrice }) => {
@@ -18,7 +19,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ img, name, rating, features, 
       <a href="./pdp.html">
         <img src={img} alt={name} className="max-h-48 max-w-full object-contain mb-4 mx-auto" />
         <h3 className="text-lg font-semibold mb-2">{name}</h3>
-        <p className="rating flex items-center justify-center mb-2">
+        <p className="text-lg rating flex items-center justify-center mb-2">
           <img src={star} alt={`${rating} estrellas`} className="w-4 h-4 mr-1" /> {rating}
         </p>
         <p className="text-lg features mb-2">{features}</p>
