@@ -2,6 +2,8 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import visa from "../assets/visa.png"
 import mastecard from "../assets/mastercard.png"
 import amex from "../assets/americanexpress.png"
+import { Link } from "react-router-dom";
+
 
 
 
@@ -57,7 +59,7 @@ export function Footer() {
         <div className="border-t border-[#4A5FD9] mt-4 pt-4 flex flex-col md:flex-row justify-center gap-6">
           <ul className="space-y-2 text-center">
             <li><a href="/" className="hover:text-[#647dec]">Inicio</a></li>
-            <li><a href="/plp2" className="hover:text-[#647dec]">Computadores</a></li>
+            <li><a href="/" className="hover:text-[#647dec]">Computadores</a></li>
             <li><a href="#" className="hover:text-[#647dec]">Carrito</a></li>
           </ul>
           <ul className="space-y-2 text-center">
