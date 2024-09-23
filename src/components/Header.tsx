@@ -18,10 +18,10 @@ export function Header() {
                 </div>
                 <nav className=''>
                     <ul className='flex items-center gap-2 md:gap-8 ml-8 ' >
-                        <li className="text-white hover:text-black "><a className="flex items-center gap-2" href="#"><i ></i>
+                        <li className="text-white hover:text-blue-500 "><a className="flex items-center gap-2" href="#"><i ></i>
                             <FaUser />
                             Mi Cuenta</a></li>
-                        <li className="text-white hover:text-black"><a className="flex items-center gap-2" href="#"><i></i><FaShoppingCart />Carrito</a></li>
+                        <li className="text-white hover:text-blue-500"><a className="flex items-center gap-2" href="#"><i></i><FaShoppingCart />Carrito</a></li>
                     </ul>
                 </nav>
             </section>
