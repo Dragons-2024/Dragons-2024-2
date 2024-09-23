@@ -1,4 +1,8 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import visa from "../assets/visa.png"
+import mastecard from "../assets/mastercard.png"
+import amex from "../assets/americanexpress.png"
+
 
 
 export function Footer() {
@@ -34,17 +38,17 @@ export function Footer() {
             <ul className="flex justify-center space-x-4">
               <li>
                 <a href="#">
-                  <img src="./src/assets/visa.png" alt="visa" className="w-16 h-10 object-contain" />
+                  <img src={visa} alt="visa" className="w-16 h-10 object-contain" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./src/assets/mastercard.png" alt="mastercard" className="w-16 h-10 object-contain" />
+                  <img src={mastecard} alt="mastercard" className="w-16 h-10 object-contain" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./src/assets/americanexpress.png" alt="americanexpress" className="w-16 h-10 object-contain" />
+                  <img src={amex} alt="americanexpress" className="w-16 h-10 object-contain" />
                 </a>
               </li>
             </ul>
