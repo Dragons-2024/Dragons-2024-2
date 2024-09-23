@@ -8,7 +8,7 @@ export function Header() {
         <header>
             <section className='flex gap-2 md:h-24 items-center bg-[#1E2759] gap-12' >
                 <div className='h-full py-0 px-0 ml-4 md:h-4/5 items-center py-2 px-8 mr-8'   >
-                    <Link to="/Dragons-2024-2/">
+                    <Link to="/">
                         <img className="h-full w-auto" src={Logo} alt="Logo" />
                     </Link>
                 </div>
