@@ -2,6 +2,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import visa from "../assets/visa.png"
 import mastecard from "../assets/mastercard.png"
 import amex from "../assets/americanexpress.png"
+import { Link } from 'react-router-dom';
 
 
 export function Footer() {
