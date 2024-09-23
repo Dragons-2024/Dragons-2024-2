@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     errorElement: <div>404 Not Found</div>, 
   },
   {
-    path: "/Dragons-2024-2/Plp",
+    path: "/Dragons-2024-2/plp",
     element: <ProductListPLP />,
     errorElement: <div>404 Not Found</div>,
   }
