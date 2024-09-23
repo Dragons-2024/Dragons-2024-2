@@ -4,6 +4,7 @@ import mastecard from "../assets/mastercard.png"
 import amex from "../assets/americanexpress.png"
 
 
+
 export function Footer() {
     return (
         <footer className="bg-[#1E2759] text-white p-8">
