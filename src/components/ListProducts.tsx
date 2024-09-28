@@ -27,7 +27,7 @@ const FeaturedProductsList: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axiosApi.get('http://localhost:3000/FeaturedProducts');
+        const response = await axiosApi.get('https://dragons-2024-2-api.onrender.com/FeaturedProducts');
         setProducts(response.data); 
       } catch (error) {
         console.error('Error fetching the products:', error);
