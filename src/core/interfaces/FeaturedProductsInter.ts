@@ -1,5 +1,6 @@
 
-export interface FeaturedProductProps {
+ export interface FeaturedProductProps {
+    id: number;
     image: string;
     name: string;
     normalPrice: number;
@@ -20,3 +21,5 @@ export interface FeaturedProductProps {
       slug: string;
     }[];
   }
+    
+
