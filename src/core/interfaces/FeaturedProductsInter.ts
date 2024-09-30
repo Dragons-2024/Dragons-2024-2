@@ -7,6 +7,7 @@
     discountPrice: number;
     discount: string;
     slug: string;
+    description:string;
   }
 
 
@@ -19,6 +20,7 @@
       discount: string;
       image: string;
       slug: string;
+      description:string;
     }[];
   }
     
