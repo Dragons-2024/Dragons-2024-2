@@ -1,8 +1,8 @@
 import { Main } from "../layout/Main";
 import FeaturedProductsList from "../components/ListProducts"; // Ruta correcta para el componente
 //import { featuredProducts } from "../utils/DataProducts";
-import { PromotionalImages } from "../components/PromoImages";
-import { PromoImages, NewPromoImage } from "../utils/PromotionalImgData";
+//import { PromoImages, NewPromoImage } from "../utils/PromotionalImgData";
+import {PromotionalImagesContainer } from "../components/PromoImages";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { BreadcrumbLinks, HomeBreadcrumb } from "../utils/BreadcrumbData";
 
@@ -14,7 +14,7 @@ export function Home() {
       <Breadcrumb blinks={BreadcrumbLinks}/>
       <section>
         <section className="w-full h-auto overflow-hidden">
-        <PromotionalImages imgs={PromoImages}/>
+        <PromotionalImagesContainer minId={1} maxId={2} />
         </section>
       </section>
       <section className="mb-8">
@@ -22,7 +22,7 @@ export function Home() {
         <FeaturedProductsList />
         </section>
         <section className="mt-8">
-        <PromotionalImages imgs={[NewPromoImage]} /> 
+        <PromotionalImagesContainer minId={3} maxId={3} />
       </section>
     </Main>
   );
