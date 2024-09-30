@@ -1,106 +1,107 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxRefrigeracion from './FilterBoxRefrigeracion';
 
 const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'Samsung French Door',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.599.900',
-    discountedPrice: '$2.079.200'
+    features: 'Refrigerador de puerta francesa, 28 cu. ft.',
+    normalPrice: '$3.599.900',
+    discountedPrice: '$2.879.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'LG InstaView',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.499.000',
-    discountedPrice: '$2.799.000'
+    features: 'Refrigerador de puerta francesa, 26 cu. ft.',
+    normalPrice: '$4.499.000',
+    discountedPrice: '$3.599.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Whirlpool Side-by-Side',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.999.000',
-    discountedPrice: '$2.499.000'
+    features: 'Refrigerador de dos puertas, 25 cu. ft.',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.199.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'GE Profile',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$1.999.000',
-    discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    features: 'Refrigerador de puerta francesa, 27 cu. ft.',
+    normalPrice: '$4.999.000',
+    discountedPrice: '$3.999.100',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Frigidaire Gallery',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.499.000',
-    discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    features: 'Refrigerador de puerta francesa, 26 cu. ft.',
+    normalPrice: '$4.499.000',
+    discountedPrice: '$3.599.200',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Bosch 800 Series',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.039.920',
-    discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    features: 'Refrigerador de puerta francesa, 21 cu. ft.',
+    normalPrice: '$5.039.920',
+    discountedPrice: '$4.431.920',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'KitchenAid Counter-Depth',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.993.900',
-    discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    features: 'Refrigerador de puerta francesa, 23 cu. ft.',
+    normalPrice: '$6.993.900',
+    discountedPrice: '$5.994.510',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Maytag Top-Freezer',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$4.380.000',
-    discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    features: 'Refrigerador de congelador superior, 21 cu. ft.',
+    normalPrice: '$2.380.000',
+    discountedPrice: '$1.890.000',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Haier Quad Door',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.900.400',
-    discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    features: 'Refrigerador de cuatro puertas, 25 cu. ft.',
+    normalPrice: '$3.900.400',
+    discountedPrice: '$3.405.380',
+    category: 'Refrigeración'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Kenmore Elite',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.140.000',
-    discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    features: 'Refrigerador de puerta francesa, 29 cu. ft.',
+    normalPrice: '$7.140.000',
+    discountedPrice: '$6.426.000',
+    category: 'Refrigeración'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPRefrigeracion = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +132,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxRefrigeracion />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

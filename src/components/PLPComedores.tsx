@@ -1,106 +1,107 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+// Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxComedores from './FilterBoxComedores';
 
 const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'Mesa de Comedor Moderna',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.599.900',
-    discountedPrice: '$2.079.200'
+    features: 'Madera, 6 sillas, color blanco',
+    normalPrice: '$1.299.900',
+    discountedPrice: '$1.039.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'Juego de Comedor Clásico',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.499.000',
-    discountedPrice: '$2.799.000'
+    features: 'Madera, 8 sillas, color marrón',
+    normalPrice: '$1.899.000',
+    discountedPrice: '$1.519.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Mesa de Comedor de Vidrio',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.999.000',
-    discountedPrice: '$2.499.000'
+    features: 'Vidrio templado, 4 sillas, color negro',
+    normalPrice: '$999.000',
+    discountedPrice: '$799.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'Mesa de Comedor Extensible',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$1.999.000',
-    discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    features: 'Madera, 6 sillas, color gris',
+    normalPrice: '$1.499.000',
+    discountedPrice: '$1.199.100',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Juego de Comedor Minimalista',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.499.000',
-    discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    features: 'Madera, 4 sillas, color blanco',
+    normalPrice: '$1.299.000',
+    discountedPrice: '$1.039.200',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Mesa de Comedor Redonda',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.039.920',
-    discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    features: 'Madera, 4 sillas, color natural',
+    normalPrice: '$1.199.920',
+    discountedPrice: '$959.920',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'Juego de Comedor Industrial',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.993.900',
-    discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    features: 'Metal y madera, 6 sillas, color negro',
+    normalPrice: '$1.599.900',
+    discountedPrice: '$1.279.510',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Mesa de Comedor Escandinava',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$4.380.000',
-    discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    features: 'Madera, 4 sillas, color blanco',
+    normalPrice: '$1.380.000',
+    discountedPrice: '$1.190.000',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Juego de Comedor Vintage',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.900.400',
-    discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    features: 'Madera, 6 sillas, color marrón',
+    normalPrice: '$1.400.400',
+    discountedPrice: '$1.205.380',
+    category: 'Comedores'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Mesa de Comedor Rústica',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.140.000',
-    discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    features: 'Madera, 8 sillas, color natural',
+    normalPrice: '$1.740.000',
+    discountedPrice: '$1.426.000',
+    category: 'Comedores'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPComedores = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +132,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxComedores />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

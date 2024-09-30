@@ -1,106 +1,107 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxCelulares from './FilterBoxCelulares';
 
 const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'iPhone 13 Pro',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.599.900',
-    discountedPrice: '$2.079.200'
+    features: '128GB, 6.1 pulgadas, Triple cámara',
+    normalPrice: '$4.599.900',
+    discountedPrice: '$4.079.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'Samsung Galaxy S21',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.499.000',
-    discountedPrice: '$2.799.000'
+    features: '256GB, 6.2 pulgadas, Triple cámara',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.499.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Google Pixel 6',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: '128GB, 6.4 pulgadas, Doble cámara',
     normalPrice: '$2.999.000',
     discountedPrice: '$2.499.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'OnePlus 9 Pro',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$1.999.000',
-    discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    features: '256GB, 6.7 pulgadas, Cuádruple cámara',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.599.100',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Xiaomi Mi 11',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.499.000',
-    discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    features: '128GB, 6.81 pulgadas, Triple cámara',
+    normalPrice: '$2.999.000',
+    discountedPrice: '$2.799.200',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Sony Xperia 1 III',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.039.920',
-    discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    features: '256GB, 6.5 pulgadas, Cuádruple cámara',
+    normalPrice: '$3.499.920',
+    discountedPrice: '$3.231.920',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'Huawei P40 Pro',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
+    features: '256GB, 6.58 pulgadas, Cuádruple cámara',
     normalPrice: '$3.993.900',
-    discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    discountedPrice: '$3.794.510',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Oppo Find X3 Pro',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
+    features: '256GB, 6.7 pulgadas, Cuádruple cámara',
     normalPrice: '$4.380.000',
-    discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    discountedPrice: '$3.990.000',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Motorola Edge Plus',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.900.400',
-    discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    features: '256GB, 6.7 pulgadas, Triple cámara',
+    normalPrice: '$3.900.400',
+    discountedPrice: '$3.705.380',
+    category: 'Celulares'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Nokia 8.3 5G',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: '128GB, 6.81 pulgadas, Cuádruple cámara',
     normalPrice: '$2.140.000',
-    discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    discountedPrice: '$1.926.000',
+    category: 'Celulares'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPCelulares = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +132,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxCelulares />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

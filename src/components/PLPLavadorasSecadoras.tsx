@@ -1,106 +1,107 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxLavadoras from './FilterBoxLavadoras';
 
 const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'LG TurboWash 360',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 4.5 cu. ft.',
     normalPrice: '$2.599.900',
     discountedPrice: '$2.079.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'Samsung FlexWash',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 6.0 cu. ft.',
     normalPrice: '$3.499.000',
     discountedPrice: '$2.799.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Whirlpool Cabrio',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga superior, 5.3 cu. ft.',
     normalPrice: '$2.999.000',
     discountedPrice: '$2.499.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'Bosch Serie 6',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 8 kg',
     normalPrice: '$1.999.000',
     discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Maytag Bravos XL',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga superior, 5.3 cu. ft.',
     normalPrice: '$2.499.000',
     discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Electrolux EFLS627UTT',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 4.4 cu. ft.',
     normalPrice: '$2.039.920',
     discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'GE GTW720BSNWS',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga superior, 4.8 cu. ft.',
     normalPrice: '$3.993.900',
     discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Kenmore Elite 41072',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 5.2 cu. ft.',
     normalPrice: '$4.380.000',
     discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Speed Queen TR3000WN',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga superior, 3.2 cu. ft.',
     normalPrice: '$2.900.400',
     discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Miele W1',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: 'Lavadora de carga frontal, 2.26 cu. ft.',
     normalPrice: '$2.140.000',
     discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    category: 'Lavadoras/Secadoras'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPLavadorasSecadoras = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +132,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxLavadoras />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

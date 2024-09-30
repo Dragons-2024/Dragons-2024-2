@@ -1,106 +1,107 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxSalas from './FilterBoxSalas';
 
 const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'Sofá de Cuero',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
+    features: 'Sofá de 3 plazas, cuero genuino',
     normalPrice: '$2.599.900',
     discountedPrice: '$2.079.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'Mesa de Centro Moderna',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.499.000',
-    discountedPrice: '$2.799.000'
+    features: 'Mesa de centro de vidrio templado',
+    normalPrice: '$899.000',
+    discountedPrice: '$719.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Sillón Reclinable',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.999.000',
-    discountedPrice: '$2.499.000'
+    features: 'Sillón reclinable de tela',
+    normalPrice: '$1.299.000',
+    discountedPrice: '$1.039.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'Estantería de Madera',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$1.999.000',
-    discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    features: 'Estantería de madera de 5 niveles',
+    normalPrice: '$799.000',
+    discountedPrice: '$639.100',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Lámpara de Pie',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.499.000',
-    discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    features: 'Lámpara de pie con luz LED',
+    normalPrice: '$499.000',
+    discountedPrice: '$399.200',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Alfombra Moderna',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.039.920',
-    discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    features: 'Alfombra de 200x300 cm',
+    normalPrice: '$1.039.920',
+    discountedPrice: '$831.920',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'Mesa Auxiliar',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.993.900',
-    discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    features: 'Mesa auxiliar de madera',
+    normalPrice: '$399.900',
+    discountedPrice: '$319.510',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Cuadro Decorativo',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$4.380.000',
-    discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    features: 'Cuadro decorativo de 100x70 cm',
+    normalPrice: '$380.000',
+    discountedPrice: '$290.000',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Cojines Decorativos',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.900.400',
-    discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    features: 'Set de 4 cojines decorativos',
+    normalPrice: '$140.400',
+    discountedPrice: '$105.380',
+    category: 'Salas'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Mueble para TV',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.140.000',
-    discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    features: 'Mueble para TV de hasta 55 pulgadas',
+    normalPrice: '$740.000',
+    discountedPrice: '$626.000',
+    category: 'Salas'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPSalas = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +132,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxSalas />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

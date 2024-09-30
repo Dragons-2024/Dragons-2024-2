@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
 import ProductItem from './ProductItem';
-import FilterBoxTVs from './FilterBoxTVs'; // Importa el componente FilterBox
+import FilterBoxBaño from './FilterBoxBaño'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
@@ -12,95 +12,95 @@ const placeholderImage = 'https://via.placeholder.com/150';
 const products = [
   {
     img: placeholderImage,
-    name: 'Samsung QLED 4K',
+    name: 'Toallero Eléctrico',
     rating: 5.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.599.900',
-    discountedPrice: '$2.079.200'
+    features: 'Acero inoxidable, 100W',
+    normalPrice: '$299.900',
+    discountedPrice: '$239.200'
   },
   {
     img: placeholderImage,
-    name: 'LG OLED 4K',
+    name: 'Espejo con Luz LED',
     rating: 4.5,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.499.000',
-    discountedPrice: '$2.799.000'
+    features: '60x80 cm, Luz regulable',
+    normalPrice: '$499.000',
+    discountedPrice: '$399.000'
   },
   {
     img: placeholderImage,
-    name: 'Sony Bravia 4K',
+    name: 'Ducha Termostática',
     rating: 4.0,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.999.000',
-    discountedPrice: '$2.499.000'
+    features: 'Acero inoxidable, Control de temperatura',
+    normalPrice: '$699.000',
+    discountedPrice: '$559.000'
   },
   // Agrega más productos aquí
   {
     img: placeholderImage,
-    name: 'TCL 4K UHD',
+    name: 'Dispensador de Jabón Automático',
     rating: 4.9,
-    features: '50 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$1.999.000',
-    discountedPrice: '$1.599.100',
-    category: 'Televisores'
+    features: 'Sensor de movimiento, 500ml',
+    normalPrice: '$199.000',
+    discountedPrice: '$159.100',
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Hisense 4K UHD',
+    name: 'Alfombra de Baño Antideslizante',
     rating: 4.6,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.499.000',
-    discountedPrice: '$1.999.200',
-    category: 'Televisores'
+    features: 'Microfibra, 50x80 cm',
+    normalPrice: '$99.000',
+    discountedPrice: '$79.200',
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Panasonic 4K UHD',
+    name: 'Cortina de Ducha Impermeable',
     rating: 4.3,
-    features: '58 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.039.920',
-    discountedPrice: '$1.631.920',
-    category: 'Televisores'
+    features: 'Poliéster, 180x200 cm',
+    normalPrice: '$59.920',
+    discountedPrice: '$47.920',
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Philips 4K UHD',
+    name: 'Set de Accesorios de Baño',
     rating: 4.7,
-    features: '65 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$3.993.900',
-    discountedPrice: '$3.194.510',
-    category: 'Televisores'
+    features: 'Acero inoxidable, 5 piezas',
+    normalPrice: '$399.900',
+    discountedPrice: '$319.510',
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Vizio 4K UHD',
+    name: 'Organizador de Ducha',
     rating: 4.8,
-    features: '70 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$4.380.000',
-    discountedPrice: '$3.490.000',
-    category: 'Televisores'
+    features: 'Acero inoxidable, 3 niveles',
+    normalPrice: '$180.000',
+    discountedPrice: '$150.000',
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Sharp 4K UHD',
+    name: 'Inodoro Inteligente',
     rating: 4.5,
-    features: '60 pulgadas, 4K UHD, Smart TV',
+    features: 'Control remoto, Bidé integrado',
     normalPrice: '$2.900.400',
     discountedPrice: '$2.405.380',
-    category: 'Televisores'
+    category: 'Baño'
   },
   {
     img: placeholderImage,
-    name: 'Toshiba 4K UHD',
+    name: 'Grifo de Lavabo Cascada',
     rating: 4.7,
-    features: '55 pulgadas, 4K UHD, Smart TV',
-    normalPrice: '$2.140.000',
-    discountedPrice: '$1.726.000',
-    category: 'Televisores'
+    features: 'Acero inoxidable, Monomando',
+    normalPrice: '$740.000',
+    discountedPrice: '$626.000',
+    category: 'Baño'
   }
 ];
 
-export const PLPTVS = () => {
+export const PLPBaño = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
   const location = useLocation();
   const { name, link }: itemprops = location.state;
@@ -131,7 +131,7 @@ export const PLPTVS = () => {
       <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBoxTVs />
+          <FilterBoxBaño />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
