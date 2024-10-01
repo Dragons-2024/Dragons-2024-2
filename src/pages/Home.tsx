@@ -18,7 +18,7 @@ export function Home() {
         </section>
       </section>
       <section className="mb-8">
-        <h2 className="px-5 py-5 font-poppins text-2xl text-center font-semibold mb-4">Productos Destacados</h2>
+        <h2 className="px-5 py-5 font-poppins text-4xl text-center font-semibold mb-4">Productos Destacados</h2>
         <FeaturedProductsList />
         </section>
         <section className="mt-8">

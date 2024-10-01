@@ -1,10 +1,9 @@
-import React from 'react';
+import { BallTriangle } from 'react-loader-spinner';
 
 export const Loading: React.FC = () => {
-    return (
-        <div className="font-poppins flex items-center justify-center h-full">
-            <div className="text-4xl font-bold text-gray-600 animate-bounce">Cargando...</div>
-        </div>
-    );
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <BallTriangle height="100" width="100" color="Yellow" ariaLabel="loading" />
+    </div>
+  );
 };
-
