@@ -7,7 +7,7 @@ import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData'
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
 
-const placeholderImage = 'https://via.placeholder.com/150';
+
 
 const products = [
   {
