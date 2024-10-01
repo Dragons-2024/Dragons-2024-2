@@ -11,7 +11,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759831/31_hzlcnd.png',
     name: 'Toallero Eléctrico',
     rating: 5.0,
     features: 'Acero inoxidable, 100W',
@@ -19,7 +19,7 @@ const products = [
     discountedPrice: '$239.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759837/32_hyhu6u.png',
     name: 'Espejo con Luz LED',
     rating: 4.5,
     features: '60x80 cm, Luz regulable',
@@ -27,7 +27,7 @@ const products = [
     discountedPrice: '$399.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759844/33_wnxpan.png',
     name: 'Ducha Termostática',
     rating: 4.0,
     features: 'Acero inoxidable, Control de temperatura',
@@ -36,7 +36,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759855/34_qf43xc.png',
     name: 'Dispensador de Jabón Automático',
     rating: 4.9,
     features: 'Sensor de movimiento, 500ml',
@@ -45,7 +45,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759864/35_f94t4j.png',
     name: 'Alfombra de Baño Antideslizante',
     rating: 4.6,
     features: 'Microfibra, 50x80 cm',
@@ -54,7 +54,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759878/36_oxghy2.png',
     name: 'Cortina de Ducha Impermeable',
     rating: 4.3,
     features: 'Poliéster, 180x200 cm',
@@ -63,7 +63,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759891/37_spgsm7.png',
     name: 'Set de Accesorios de Baño',
     rating: 4.7,
     features: 'Acero inoxidable, 5 piezas',
@@ -72,7 +72,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759902/38_fa4alz.png',
     name: 'Organizador de Ducha',
     rating: 4.8,
     features: 'Acero inoxidable, 3 niveles',
@@ -81,7 +81,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759909/39_eieb1y.png',
     name: 'Inodoro Inteligente',
     rating: 4.5,
     features: 'Control remoto, Bidé integrado',
@@ -90,7 +90,7 @@ const products = [
     category: 'Baño'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759920/40_xeqmtb.png',
     name: 'Grifo de Lavabo Cascada',
     rating: 4.7,
     features: 'Acero inoxidable, Monomando',
@@ -146,7 +146,7 @@ export const PLPBaño = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761756/121_ptkdur.png',
     name: 'Sofá de Cuero',
     rating: 5.0,
     features: 'Sofá de 3 plazas, cuero genuino',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$2.079.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761767/122_jptly7.png',
     name: 'Mesa de Centro Moderna',
     rating: 4.5,
     features: 'Mesa de centro de vidrio templado',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$719.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761769/123_exabgx.png',
     name: 'Sillón Reclinable',
     rating: 4.0,
     features: 'Sillón reclinable de tela',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761774/124_rfsqw8.png',
     name: 'Estantería de Madera',
     rating: 4.9,
     features: 'Estantería de madera de 5 niveles',
@@ -46,7 +46,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761772/125_ocdbmx.png',
     name: 'Lámpara de Pie',
     rating: 4.6,
     features: 'Lámpara de pie con luz LED',
@@ -55,7 +55,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761780/126_ohcdsf.png',
     name: 'Alfombra Moderna',
     rating: 4.3,
     features: 'Alfombra de 200x300 cm',
@@ -64,7 +64,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761782/127_zy4yxc.png',
     name: 'Mesa Auxiliar',
     rating: 4.7,
     features: 'Mesa auxiliar de madera',
@@ -73,7 +73,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761785/128_csc8fi.png',
     name: 'Cuadro Decorativo',
     rating: 4.8,
     features: 'Cuadro decorativo de 100x70 cm',
@@ -82,7 +82,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761778/129_rhrjsn.png',
     name: 'Cojines Decorativos',
     rating: 4.5,
     features: 'Set de 4 cojines decorativos',
@@ -91,7 +91,7 @@ const products = [
     category: 'Salas'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761787/130_klwefo.png',
     name: 'Mueble para TV',
     rating: 4.7,
     features: 'Mueble para TV de hasta 55 pulgadas',
@@ -147,7 +147,7 @@ export const PLPSalas = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

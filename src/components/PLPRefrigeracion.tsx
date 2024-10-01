@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761652/111_ox1uyo.png',
     name: 'Samsung French Door',
     rating: 5.0,
     features: 'Refrigerador de puerta francesa, 28 cu. ft.',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$2.879.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761656/112_bsln8s.png',
     name: 'LG InstaView',
     rating: 4.5,
     features: 'Refrigerador de puerta francesa, 26 cu. ft.',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$3.599.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761658/113_fuanql.png',
     name: 'Whirlpool Side-by-Side',
     rating: 4.0,
     features: 'Refrigerador de dos puertas, 25 cu. ft.',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img:'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761661/114_ji9o78.png',
     name: 'GE Profile',
     rating: 4.9,
     features: 'Refrigerador de puerta francesa, 27 cu. ft.',
@@ -46,7 +46,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761666/115_hzqq1c.png',
     name: 'Frigidaire Gallery',
     rating: 4.6,
     features: 'Refrigerador de puerta francesa, 26 cu. ft.',
@@ -55,7 +55,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761664/116_vxwu1d.png',
     name: 'Bosch 800 Series',
     rating: 4.3,
     features: 'Refrigerador de puerta francesa, 21 cu. ft.',
@@ -64,7 +64,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761673/117_qmsag6.png',
     name: 'KitchenAid Counter-Depth',
     rating: 4.7,
     features: 'Refrigerador de puerta francesa, 23 cu. ft.',
@@ -73,7 +73,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761679/118_b1p1vp.png',
     name: 'Maytag Top-Freezer',
     rating: 4.8,
     features: 'Refrigerador de congelador superior, 21 cu. ft.',
@@ -82,7 +82,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761677/119_wz8gua.png',
     name: 'Haier Quad Door',
     rating: 4.5,
     features: 'Refrigerador de cuatro puertas, 25 cu. ft.',
@@ -91,7 +91,7 @@ const products = [
     category: 'Refrigeración'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761681/120_zrhgnb.png',
     name: 'Kenmore Elite',
     rating: 4.7,
     features: 'Refrigerador de puerta francesa, 29 cu. ft.',
@@ -147,7 +147,7 @@ export const PLPRefrigeracion = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

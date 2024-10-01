@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761071/61_qtqyqz.png',
     name: 'Aire Acondicionado LG Dual Inverter',
     rating: 5.0,
     features: '12000 BTU, Eficiencia Energética A++',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$2.079.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761074/62_huxgjo.png',
     name: 'Ventilador de Torre Dyson AM07',
     rating: 4.5,
     features: 'Sin Aspas, Control Remoto',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$1.199.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761076/63_hrwmy0.png',
     name: 'Calefactor Eléctrico DeLonghi',
     rating: 4.0,
     features: '1500W, Termostato Ajustable',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761085/64_zbcxtr.png',
     name: 'Purificador de Aire Philips',
     rating: 4.9,
     features: 'Filtro HEPA, Control por App',
@@ -46,7 +46,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761095/65_od2orc.png',
     name: 'Humidificador Ultrasónico Levoit',
     rating: 4.6,
     features: '6L, Control Táctil',
@@ -55,7 +55,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761097/66_yqmypt.png',
     name: 'Deshumidificador Pro Breeze',
     rating: 4.3,
     features: '12L, Auto Apagado',
@@ -64,7 +64,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761101/67_dyxshn.png',
     name: 'Aire Acondicionado Portátil Honeywell',
     rating: 4.7,
     features: '10000 BTU, Control Remoto',
@@ -73,7 +73,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761110/68_oghf7c.png',
     name: 'Ventilador de Mesa Rowenta',
     rating: 4.8,
     features: 'Silencioso, 5 Velocidades',
@@ -82,7 +82,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761118/69_ugzjpm.png',
     name: 'Calefactor Cerámico Lasko',
     rating: 4.5,
     features: '1500W, Oscilante',
@@ -91,7 +91,7 @@ const products = [
     category: 'Climatización'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761122/70_puwr5b.png',
     name: 'Purificador de Aire Xiaomi Mi Air',
     rating: 4.7,
     features: 'Filtro HEPA, Control por App',
@@ -147,7 +147,7 @@ export const PLPClimatizacion = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

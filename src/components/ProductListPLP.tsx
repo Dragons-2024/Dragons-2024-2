@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-import computadora1 from '../assets/computadores/computadora1.jpg';
-import computadora2 from '../assets/computadores/computadora2.jpg';
-import computadora3 from '../assets/computadores/computadora3.jpg';
-import computadora4 from '../assets/computadores/computadora4.jpg';
-import computadora5 from '../assets/computadores/computadora5.jpg';
-import computadora6 from '../assets/computadores/computadora6.jpg';
-import computadora7 from '../assets/computadores/computadora7.jpg';
-import computadora8 from '../assets/computadores/computadora8.jpg';
-import computadora9 from '../assets/computadores/computadora9.jpg';
-import computadora10 from '../assets/computadores/computadora10.jpg';
+
 import ProductItem from './ProductItem';
 import FilterBox from './FilterBox'; // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4

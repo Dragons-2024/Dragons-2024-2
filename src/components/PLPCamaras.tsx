@@ -11,7 +11,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760240/41_bpnarh.png',
     name: 'Canon EOS R5',
     rating: 5.0,
     features: '45 MP, Full-Frame, 8K Video',
@@ -19,7 +19,7 @@ const products = [
     discountedPrice: '$3.199.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760121/42_k6mnq1.png',
     name: 'Sony Alpha a7 III',
     rating: 4.5,
     features: '24 MP, Full-Frame, 4K Video',
@@ -27,7 +27,7 @@ const products = [
     discountedPrice: '$1.999.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760208/43_sdjpno.png',
     name: 'Nikon Z6',
     rating: 4.0,
     features: '24.5 MP, Full-Frame, 4K Video',
@@ -36,7 +36,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760210/44_aqd3mt.png',
     name: 'Fujifilm X-T4',
     rating: 4.9,
     features: '26 MP, APS-C, 4K Video',
@@ -45,7 +45,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760264/45_stl5xt.png',
     name: 'Panasonic Lumix GH5',
     rating: 4.6,
     features: '20 MP, Micro Four Thirds, 4K Video',
@@ -54,7 +54,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760264/45_stl5xt.png',
     name: 'Olympus OM-D E-M1 Mark III',
     rating: 4.3,
     features: '20 MP, Micro Four Thirds, 4K Video',
@@ -63,7 +63,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760250/47_xhwdtp.png',
     name: 'Leica Q2',
     rating: 4.7,
     features: '47 MP, Full-Frame, 4K Video',
@@ -72,7 +72,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760112/48_gzaefe.png',
     name: 'GoPro HERO9 Black',
     rating: 4.8,
     features: '20 MP, 5K Video, Waterproof',
@@ -81,7 +81,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760066/49_c9ewpw.png',
     name: 'DJI Osmo Pocket',
     rating: 4.5,
     features: '12 MP, 4K Video, Gimbal Stabilizer',
@@ -90,7 +90,7 @@ const products = [
     category: 'Cámaras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760219/50_u5fivh.png',
     name: 'Canon PowerShot G7 X Mark III',
     rating: 4.7,
     features: '20 MP, 1-inch Sensor, 4K Video',
@@ -146,7 +146,7 @@ export const PLPCamaras = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

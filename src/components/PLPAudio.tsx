@@ -11,7 +11,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759685/21_tyhveq.png',
     name: 'Sony WH-1000XM4',
     rating: 5.0,
     features: 'Auriculares inalámbricos con cancelación de ruido',
@@ -19,7 +19,7 @@ const products = [
     discountedPrice: '$1.039.200'
   },
   {
-    img: placeholderImage,
+    img:'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759699/22_e8xr3h.png',
     name: 'Bose SoundLink Revolve',
     rating: 4.5,
     features: 'Altavoz Bluetooth portátil',
@@ -27,7 +27,7 @@ const products = [
     discountedPrice: '$719.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759714/23_gujhru.png',
     name: 'JBL Charge 4',
     rating: 4.0,
     features: 'Altavoz Bluetooth portátil resistente al agua',
@@ -36,7 +36,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759724/24_soyomi.png',
     name: 'Sennheiser HD 450BT',
     rating: 4.9,
     features: 'Auriculares inalámbricos con cancelación de ruido',
@@ -45,7 +45,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759745/25_fuub8h.png',
     name: 'Marshall Stanmore II',
     rating: 4.6,
     features: 'Altavoz Bluetooth',
@@ -54,7 +54,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759760/26_fmil2k.png',
     name: 'Bang & Olufsen Beoplay A1',
     rating: 4.3,
     features: 'Altavoz Bluetooth portátil',
@@ -63,7 +63,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759765/27_rzpege.png',
     name: 'Apple AirPods Pro',
     rating: 4.7,
     features: 'Auriculares inalámbricos con cancelación de ruido',
@@ -72,7 +72,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759770/28_nbqi8p.png',
     name: 'Sonos One',
     rating: 4.8,
     features: 'Altavoz inteligente con control por voz',
@@ -81,7 +81,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759776/29_vgopyr.png',
     name: 'Bose QuietComfort 35 II',
     rating: 4.5,
     features: 'Auriculares inalámbricos con cancelación de ruido',
@@ -90,7 +90,7 @@ const products = [
     category: 'Audio'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759797/30_ilr77o.png',
     name: 'Ultimate Ears Boom 3',
     rating: 4.7,
     features: 'Altavoz Bluetooth portátil resistente al agua',
@@ -146,7 +146,7 @@ export const PLPAudio = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

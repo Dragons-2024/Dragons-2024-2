@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761569/101_uxdnug.png',
     name: 'LG TurboWash 360',
     rating: 5.0,
     features: 'Lavadora de carga frontal, 4.5 cu. ft.',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$2.079.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761572/102_j84szk.png',
     name: 'Samsung FlexWash',
     rating: 4.5,
     features: 'Lavadora de carga frontal, 6.0 cu. ft.',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$2.799.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761574/103_cxqmhy.png',
     name: 'Whirlpool Cabrio',
     rating: 4.0,
     features: 'Lavadora de carga superior, 5.3 cu. ft.',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img:'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761578/104_hnpdqi.png',
     name: 'Bosch Serie 6',
     rating: 4.9,
     features: 'Lavadora de carga frontal, 8 kg',
@@ -46,7 +46,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761581/105_s4qony.png',
     name: 'Maytag Bravos XL',
     rating: 4.6,
     features: 'Lavadora de carga superior, 5.3 cu. ft.',
@@ -55,7 +55,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761583/106_d2squh.png',
     name: 'Electrolux EFLS627UTT',
     rating: 4.3,
     features: 'Lavadora de carga frontal, 4.4 cu. ft.',
@@ -64,7 +64,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761576/107_yo6d4b.png',
     name: 'GE GTW720BSNWS',
     rating: 4.7,
     features: 'Lavadora de carga superior, 4.8 cu. ft.',
@@ -73,7 +73,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761585/108_xct2mb.png',
     name: 'Kenmore Elite 41072',
     rating: 4.8,
     features: 'Lavadora de carga frontal, 5.2 cu. ft.',
@@ -82,7 +82,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761587/109_gnjtgy.png',
     name: 'Speed Queen TR3000WN',
     rating: 4.5,
     features: 'Lavadora de carga superior, 3.2 cu. ft.',
@@ -91,7 +91,7 @@ const products = [
     category: 'Lavadoras/Secadoras'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761589/110_prpxzg.png',
     name: 'Miele W1',
     rating: 4.7,
     features: 'Lavadora de carga frontal, 2.26 cu. ft.',
@@ -147,7 +147,7 @@ export const PLPLavadorasSecadoras = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

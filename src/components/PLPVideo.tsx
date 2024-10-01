@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762349/161_gbbfhs.png',
     name: 'Canon EOS R5',
     rating: 5.0,
     features: 'Cámara sin espejo, 45 MP, 8K video',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$3.199.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762359/162_izodfc.png',
     name: 'Sony A7 III',
     rating: 4.5,
     features: 'Cámara sin espejo, 24 MP, 4K video',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$1.999.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762362/163_qhtp0g.png',
     name: 'Panasonic Lumix GH5',
     rating: 4.0,
     features: 'Cámara sin espejo, 20 MP, 4K video',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762352/164_i60fyc.png',
     name: 'GoPro HERO9 Black',
     rating: 4.9,
     features: 'Cámara de acción, 5K video, HyperSmooth 3.0',
@@ -46,7 +46,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762365/165_ughhzr.png',
     name: 'DJI Osmo Pocket',
     rating: 4.6,
     features: 'Cámara de bolsillo, 4K video, estabilizador',
@@ -55,7 +55,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762367/166_x0euio.png',
     name: 'Blackmagic Pocket Cinema Camera 6K',
     rating: 4.3,
     features: 'Cámara de cine, 6K video, sensor Super 35',
@@ -64,7 +64,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762370/167_skpvkf.png',
     name: 'Canon VIXIA HF G50',
     rating: 4.7,
     features: 'Videocámara, 4K video, zoom óptico 20x',
@@ -73,7 +73,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img:'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762356/168_amzjui.png',
     name: 'Sony FDR-AX43',
     rating: 4.8,
     features: 'Videocámara, 4K video, estabilizador óptico',
@@ -82,7 +82,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762373/169_pavta4.png',
     name: 'Panasonic HC-VX981K',
     rating: 4.5,
     features: 'Videocámara, 4K video, zoom óptico 20x',
@@ -91,7 +91,7 @@ const products = [
     category: 'Video'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762376/170_wgwxht.png',
     name: 'JVC Everio GZ-R460',
     rating: 4.7,
     features: 'Videocámara, Full HD, resistente al agua',
@@ -147,7 +147,7 @@ export const PLPVideo = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

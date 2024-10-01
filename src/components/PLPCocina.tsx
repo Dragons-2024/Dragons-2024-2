@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761196/71_fsqwca.png',
     name: 'Licuadora Oster',
     rating: 5.0,
     features: '600W, 1.5L, 3 velocidades',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$239.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761197/72_cwbtsh.png',
     name: 'Microondas LG',
     rating: 4.5,
     features: '1000W, 20L, Digital',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$399.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761199/73_ubxz3i.png',
     name: 'Cafetera Nespresso',
     rating: 4.0,
     features: '19 bares, Automática',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761201/74_rx84vx.png',
     name: 'Batidora KitchenAid',
     rating: 4.9,
     features: '300W, 4.8L, 10 velocidades',
@@ -46,7 +46,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761211/75_zoie7e.png',
     name: 'Horno Tostador Black+Decker',
     rating: 4.6,
     features: '1500W, 20L, Convección',
@@ -55,7 +55,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761212/76_rofr3t.png',
     name: 'Freidora de Aire Philips',
     rating: 4.3,
     features: '1400W, 4.1L, Digital',
@@ -64,7 +64,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761214/77_anqfr9.png',
     name: 'Procesador de Alimentos Cuisinart',
     rating: 4.7,
     features: '720W, 14 tazas, 2 velocidades',
@@ -73,7 +73,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761218/78_t74rew.png',
     name: 'Extractor de Jugos Hamilton Beach',
     rating: 4.8,
     features: '800W, 1.1L, Acero Inoxidable',
@@ -82,7 +82,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761216/79_ofzzyb.png',
     name: 'Tostadora Oster',
     rating: 4.5,
     features: '800W, 2 rebanadas, Acero Inoxidable',
@@ -91,7 +91,7 @@ const products = [
     category: 'Cocina'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761219/80_bb3jiv.png',
     name: 'Licuadora Ninja',
     rating: 4.7,
     features: '1000W, 2.1L, 3 velocidades',
@@ -147,7 +147,7 @@ export const PLPCocina = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

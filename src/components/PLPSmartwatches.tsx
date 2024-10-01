@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761857/131_ffhmxy.png',
     name: 'Apple Watch Series 6',
     rating: 5.0,
     features: 'GPS, 44mm, Caja de Aluminio',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$1.039.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761866/132_bvf3kz.png',
     name: 'Samsung Galaxy Watch 4',
     rating: 4.5,
     features: 'GPS, 40mm, Caja de Aluminio',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$719.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761860/133_xwg9lp.png',
     name: 'Fitbit Versa 3',
     rating: 4.0,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761872/134_k18rr5.png',
     name: 'Garmin Forerunner 245',
     rating: 4.9,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -46,7 +46,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761874/135_yqi1sb.png',
     name: 'Huawei Watch GT 2',
     rating: 4.6,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -55,7 +55,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761864/136_holsno.png',
     name: 'Amazfit Bip U Pro',
     rating: 4.3,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -64,7 +64,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761877/137_d8hd3f.png',
     name: 'TicWatch Pro 3',
     rating: 4.7,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -73,7 +73,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761879/138_uc6bjx.png',
     name: 'Fossil Gen 5',
     rating: 4.8,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -82,7 +82,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761882/139_rgtkt1.png',
     name: 'Withings Steel HR',
     rating: 4.5,
     features: 'Monitor de Ritmo Cardíaco',
@@ -91,7 +91,7 @@ const products = [
     category: 'Smartwatches'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761869/140_wpr1e4.png',
     name: 'Suunto 7',
     rating: 4.7,
     features: 'GPS, Monitor de Ritmo Cardíaco',
@@ -147,7 +147,7 @@ export const PLPSmartwatches = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

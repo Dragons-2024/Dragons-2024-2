@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761455/91_lcya2g.png',
     name: 'HP LaserJet Pro MFP',
     rating: 5.0,
     features: 'Impresora multifunción láser',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$1.039.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761456/92_qvtjov.png',
     name: 'Canon PIXMA G6020',
     rating: 4.5,
     features: 'Impresora de inyección de tinta',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$719.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761461/93_qbduad.png',
     name: 'Epson EcoTank L3150',
     rating: 4.0,
     features: 'Impresora de tanque de tinta',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761459/94_uxkgj6.png',
     name: 'Brother HL-L2350DW',
     rating: 4.9,
     features: 'Impresora láser monocromática',
@@ -46,7 +46,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761462/95_hrgt6i.png',
     name: 'Samsung Xpress M2020W',
     rating: 4.6,
     features: 'Impresora láser inalámbrica',
@@ -55,7 +55,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761466/96_mlgrzr.png',
     name: 'Lexmark MB2236adw',
     rating: 4.3,
     features: 'Impresora multifunción láser',
@@ -64,7 +64,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761471/97_ulwrvr.png',
     name: 'Ricoh SP 3710DN',
     rating: 4.7,
     features: 'Impresora láser monocromática',
@@ -73,7 +73,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761473/98_uzkrco.png',
     name: 'Xerox Phaser 6510',
     rating: 4.8,
     features: 'Impresora láser a color',
@@ -82,7 +82,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761475/99_j6oi6f.png',
     name: 'Kyocera ECOSYS P5026cdw',
     rating: 4.5,
     features: 'Impresora láser a color',
@@ -91,7 +91,7 @@ const products = [
     category: 'Impresión'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761478/100_iov21v.png',
     name: 'Dell E310dw',
     rating: 4.7,
     features: 'Impresora láser monocromática',
@@ -147,7 +147,7 @@ export const PLPImpresion = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

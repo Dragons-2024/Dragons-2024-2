@@ -11,7 +11,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762210/151_datyzx.png',
     name: 'Samsung QLED 4K',
     rating: 5.0,
     features: '55 pulgadas, 4K UHD, Smart TV',
@@ -19,7 +19,7 @@ const products = [
     discountedPrice: '$2.079.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762217/152_o9i3zu.png',
     name: 'LG OLED 4K',
     rating: 4.5,
     features: '65 pulgadas, 4K UHD, Smart TV',
@@ -27,7 +27,7 @@ const products = [
     discountedPrice: '$2.799.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762214/153_rtv5ux.png',
     name: 'Sony Bravia 4K',
     rating: 4.0,
     features: '55 pulgadas, 4K UHD, Smart TV',
@@ -36,7 +36,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762223/154_rnxr4q.png',
     name: 'TCL 4K UHD',
     rating: 4.9,
     features: '50 pulgadas, 4K UHD, Smart TV',
@@ -45,7 +45,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762226/155_vb9n5a.png',
     name: 'Hisense 4K UHD',
     rating: 4.6,
     features: '55 pulgadas, 4K UHD, Smart TV',
@@ -54,7 +54,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762228/156_tlefjz.png',
     name: 'Panasonic 4K UHD',
     rating: 4.3,
     features: '58 pulgadas, 4K UHD, Smart TV',
@@ -63,7 +63,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762231/157_pf5evc.png',
     name: 'Philips 4K UHD',
     rating: 4.7,
     features: '65 pulgadas, 4K UHD, Smart TV',
@@ -72,7 +72,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762220/158_j9q9bx.png',
     name: 'Vizio 4K UHD',
     rating: 4.8,
     features: '70 pulgadas, 4K UHD, Smart TV',
@@ -81,7 +81,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762237/159_fhggbs.png',
     name: 'Sharp 4K UHD',
     rating: 4.5,
     features: '60 pulgadas, 4K UHD, Smart TV',
@@ -90,7 +90,7 @@ const products = [
     category: 'Televisores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762234/160_ywuxda.png',
     name: 'Toshiba 4K UHD',
     rating: 4.7,
     features: '55 pulgadas, 4K UHD, Smart TV',
@@ -146,7 +146,7 @@ export const PLPTVS = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

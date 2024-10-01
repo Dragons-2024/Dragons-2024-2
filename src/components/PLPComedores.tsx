@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761320/81_tcxjz4.png',
     name: 'Mesa de Comedor Moderna',
     rating: 5.0,
     features: 'Madera, 6 sillas, color blanco',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$1.039.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761321/82_rvgqzv.png',
     name: 'Juego de Comedor Clásico',
     rating: 4.5,
     features: 'Madera, 8 sillas, color marrón',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$1.519.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761325/83_tfs8uv.png',
     name: 'Mesa de Comedor de Vidrio',
     rating: 4.0,
     features: 'Vidrio templado, 4 sillas, color negro',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761330/84_dws6ri.png',
     name: 'Mesa de Comedor Extensible',
     rating: 4.9,
     features: 'Madera, 6 sillas, color gris',
@@ -46,7 +46,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761334/85_zgva5j.png',
     name: 'Juego de Comedor Minimalista',
     rating: 4.6,
     features: 'Madera, 4 sillas, color blanco',
@@ -55,7 +55,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761343/86_ks0lby.png',
     name: 'Mesa de Comedor Redonda',
     rating: 4.3,
     features: 'Madera, 4 sillas, color natural',
@@ -64,7 +64,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761345/87_qfvcrw.png',
     name: 'Juego de Comedor Industrial',
     rating: 4.7,
     features: 'Metal y madera, 6 sillas, color negro',
@@ -73,7 +73,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761347/88_lnum11.png',
     name: 'Mesa de Comedor Escandinava',
     rating: 4.8,
     features: 'Madera, 4 sillas, color blanco',
@@ -82,7 +82,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761357/89_jxnsrr.png',
     name: 'Juego de Comedor Vintage',
     rating: 4.5,
     features: 'Madera, 6 sillas, color marrón',
@@ -91,7 +91,7 @@ const products = [
     category: 'Comedores'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761359/90_mvfz6l.png',
     name: 'Mesa de Comedor Rústica',
     rating: 4.7,
     features: 'Madera, 8 sillas, color natural',
@@ -147,7 +147,7 @@ export const PLPComedores = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}

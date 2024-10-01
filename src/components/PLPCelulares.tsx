@@ -12,7 +12,7 @@ const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760172/51_nsexui.png',
     name: 'iPhone 13 Pro',
     rating: 5.0,
     features: '128GB, 6.1 pulgadas, Triple cámara',
@@ -20,7 +20,7 @@ const products = [
     discountedPrice: '$4.079.200'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760272/52_gp3nnv.png',
     name: 'Samsung Galaxy S21',
     rating: 4.5,
     features: '256GB, 6.2 pulgadas, Triple cámara',
@@ -28,7 +28,7 @@ const products = [
     discountedPrice: '$3.499.000'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760274/53_k0st2t.png',
     name: 'Google Pixel 6',
     rating: 4.0,
     features: '128GB, 6.4 pulgadas, Doble cámara',
@@ -37,7 +37,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760277/54_plkvsk.png',
     name: 'OnePlus 9 Pro',
     rating: 4.9,
     features: '256GB, 6.7 pulgadas, Cuádruple cámara',
@@ -46,7 +46,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760279/55_euhe8x.png',
     name: 'Xiaomi Mi 11',
     rating: 4.6,
     features: '128GB, 6.81 pulgadas, Triple cámara',
@@ -55,7 +55,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760175/56_lym7qn.png',
     name: 'Sony Xperia 1 III',
     rating: 4.3,
     features: '256GB, 6.5 pulgadas, Cuádruple cámara',
@@ -64,7 +64,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760282/57_xknn2h.png',
     name: 'Huawei P40 Pro',
     rating: 4.7,
     features: '256GB, 6.58 pulgadas, Cuádruple cámara',
@@ -73,7 +73,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760863/58_fmwdxm.png',
     name: 'Oppo Find X3 Pro',
     rating: 4.8,
     features: '256GB, 6.7 pulgadas, Cuádruple cámara',
@@ -82,7 +82,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760285/59_nbdt3k.png',
     name: 'Motorola Edge Plus',
     rating: 4.5,
     features: '256GB, 6.7 pulgadas, Triple cámara',
@@ -91,7 +91,7 @@ const products = [
     category: 'Celulares'
   },
   {
-    img: placeholderImage,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760287/60_hpk93a.png',
     name: 'Nokia 8.3 5G',
     rating: 4.7,
     features: '128GB, 6.81 pulgadas, Cuádruple cámara',
@@ -147,7 +147,7 @@ export const PLPCelulares = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             {sortedProducts.map((product, index) => (
               <ProductItem
                 key={index}
