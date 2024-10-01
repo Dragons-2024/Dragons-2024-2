@@ -28,9 +28,10 @@ export function Pdp(){
    
 
    return (
-    <Main >
+    <Main>
         <div className="mx-auto my-0 py-20 px-0 w-11/12 max-w-7xl flex flex-col">
-        <h1 className="text-3xl text-blue-950 font-semibold">{name}</h1>
+        <h1 className="text-3xl text-blue-950 font-semibold max-[768px]:text-center 
+        xl:text-4xl xl:text-left">{name}</h1>
         <ProductDetail name={product.name} img={product.image} description={product.description}/>
         </div>
     </Main>
