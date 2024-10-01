@@ -1,110 +1,112 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-
 import ProductItem from './ProductItem';
-import FilterBox from './FilterBox'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxClimatizacion from './FilterBoxClimatizacion';
+
+const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
-    name: 'Lenovo ThinkPad X1 Carbon',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761071/61_qtqyqz.png',
+    name: 'Aire Acondicionado LG Dual Inverter',
     rating: 5.0,
-    features: 'Intel i7, 16GB RAM, 512GB SSD',
-    normalPrice: '$3.599.900',
-    discountedPrice: '$2.879.200'
+    features: '12000 BTU, Eficiencia Energética A++',
+    normalPrice: '$2.599.900',
+    discountedPrice: '$2.079.200'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
-    name: 'HP Spectre x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761074/62_huxgjo.png',
+    name: 'Ventilador de Torre Dyson AM07',
     rating: 4.5,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$6.499.000',
-    discountedPrice: '$3.199.000'
+    features: 'Sin Aspas, Control Remoto',
+    normalPrice: '$1.499.000',
+    discountedPrice: '$1.199.000'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
-    name: 'Dell XPS 13',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761076/63_hrwmy0.png',
+    name: 'Calefactor Eléctrico DeLonghi',
     rating: 4.0,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.999.000',
-    discountedPrice: '$6.499.000'
+    features: '1500W, Termostato Ajustable',
+    normalPrice: '$899.000',
+    discountedPrice: '$719.000'
   },
   // Agrega más productos aquí
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
-    name: 'Apple MacBook Air',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761085/64_zbcxtr.png',
+    name: 'Purificador de Aire Philips',
     rating: 4.9,
-    features: 'Apple M1, 8GB RAM, 256GB SSD',
-    normalPrice: '$399.000',
-    discountedPrice: '$3.059.100',
-    category: 'Computadores'
+    features: 'Filtro HEPA, Control por App',
+    normalPrice: '$1.199.000',
+    discountedPrice: '$959.100',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
-    name: 'Asus ZenBook 14',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761095/65_od2orc.png',
+    name: 'Humidificador Ultrasónico Levoit',
     rating: 4.6,
-    features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
-    normalPrice: '$4.999.000',
-    discountedPrice: '$3.999.200',
-    category: 'Computadores'
+    features: '6L, Control Táctil',
+    normalPrice: '$499.000',
+    discountedPrice: '$399.200',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
-    name: 'Acer Swift 3',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761097/66_yqmypt.png',
+    name: 'Deshumidificador Pro Breeze',
     rating: 4.3,
-    features: 'Intel i5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.039.920',
-    discountedPrice: '$2.431.920',
-    category: 'Computadores'
+    features: '12L, Auto Apagado',
+    normalPrice: '$799.920',
+    discountedPrice: '$639.920',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
-    name: 'Microsoft Surface Laptop 4',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761101/67_dyxshn.png',
+    name: 'Aire Acondicionado Portátil Honeywell',
     rating: 4.7,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$8.993.900',
-    discountedPrice: '$8.094.510',
-    category: 'Computadores'
+    features: '10000 BTU, Control Remoto',
+    normalPrice: '$1.499.900',
+    discountedPrice: '$1.199.510',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
-    name: 'Razer Blade 15',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761110/68_oghf7c.png',
+    name: 'Ventilador de Mesa Rowenta',
     rating: 4.8,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$23.380.000',
-    discountedPrice: '$11.690.000',
-    category: 'Computadores'
+    features: 'Silencioso, 5 Velocidades',
+    normalPrice: '$299.000',
+    discountedPrice: '$239.000',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
-    name: 'HP Envy x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761118/69_ugzjpm.png',
+    name: 'Calefactor Cerámico Lasko',
     rating: 4.5,
-    features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.900.400',
-    discountedPrice: '$3.705.380',
-    category: 'Computadores'
+    features: '1500W, Oscilante',
+    normalPrice: '$399.400',
+    discountedPrice: '$319.380',
+    category: 'Climatización'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
-    name: 'LG Gram 17',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761122/70_puwr5b.png',
+    name: 'Purificador de Aire Xiaomi Mi Air',
     rating: 4.7,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.140.000',
-    discountedPrice: '$6.426.000',
-    category: 'Computadores'
+    features: 'Filtro HEPA, Control por App',
+    normalPrice: '$599.000',
+    discountedPrice: '$479.000',
+    category: 'Climatización'
   }
 ];
 
-export const ProductListPLP = () => {
+export const PLPClimatizacion = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-  const location=useLocation();
-  const {name,link}:itemprops= location.state;
-  CategoryLink({name,link:"#"});
-  let arraylinks=plpBreadCrumb({name,link});
+  const location = useLocation();
+  const { name, link }: itemprops = location.state;
+  CategoryLink({ name, link: "#" });
+  let arraylinks = plpBreadCrumb({ name, link });
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
@@ -127,10 +129,10 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-      <Breadcrumb blinks={arraylinks}/>
+      <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBox />
+          <FilterBoxClimatizacion/>
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

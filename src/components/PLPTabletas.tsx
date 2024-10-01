@@ -1,110 +1,112 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-
 import ProductItem from './ProductItem';
-import FilterBox from './FilterBox'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxTabletas from './FilterBoxTabletas';
+
+const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
-    name: 'Lenovo ThinkPad X1 Carbon',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761933/141_wnrzsf.png',
+    name: 'Apple iPad Pro',
     rating: 5.0,
-    features: 'Intel i7, 16GB RAM, 512GB SSD',
+    features: '12.9 pulgadas, 256GB, Wi-Fi',
     normalPrice: '$3.599.900',
     discountedPrice: '$2.879.200'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
-    name: 'HP Spectre x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761939/142_josg4h.png',
+    name: 'Samsung Galaxy Tab S7',
     rating: 4.5,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$6.499.000',
-    discountedPrice: '$3.199.000'
+    features: '11 pulgadas, 128GB, Wi-Fi',
+    normalPrice: '$2.499.000',
+    discountedPrice: '$1.999.000'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
-    name: 'Dell XPS 13',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761942/143_sf7ftg.png',
+    name: 'Microsoft Surface Pro 7',
     rating: 4.0,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.999.000',
-    discountedPrice: '$6.499.000'
+    features: '12.3 pulgadas, 256GB, Wi-Fi',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.499.000'
   },
   // Agrega más productos aquí
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
-    name: 'Apple MacBook Air',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761936/144_xfojkm.png',
+    name: 'Lenovo Tab P11 Pro',
     rating: 4.9,
-    features: 'Apple M1, 8GB RAM, 256GB SSD',
-    normalPrice: '$399.000',
-    discountedPrice: '$3.059.100',
-    category: 'Computadores'
+    features: '11.5 pulgadas, 128GB, Wi-Fi',
+    normalPrice: '$1.999.000',
+    discountedPrice: '$1.599.100',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
-    name: 'Asus ZenBook 14',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761944/145_zxyxsk.png',
+    name: 'Amazon Fire HD 10',
     rating: 4.6,
-    features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
-    normalPrice: '$4.999.000',
-    discountedPrice: '$3.999.200',
-    category: 'Computadores'
+    features: '10.1 pulgadas, 64GB, Wi-Fi',
+    normalPrice: '$999.000',
+    discountedPrice: '$799.200',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
-    name: 'Acer Swift 3',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761947/146_yuldqf.png',
+    name: 'Huawei MatePad Pro',
     rating: 4.3,
-    features: 'Intel i5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.039.920',
-    discountedPrice: '$2.431.920',
-    category: 'Computadores'
+    features: '10.8 pulgadas, 128GB, Wi-Fi',
+    normalPrice: '$2.039.920',
+    discountedPrice: '$1.631.920',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
-    name: 'Microsoft Surface Laptop 4',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761949/147_hy0sid.png',
+    name: 'Asus ZenPad 3S 10',
     rating: 4.7,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$8.993.900',
-    discountedPrice: '$8.094.510',
-    category: 'Computadores'
+    features: '9.7 pulgadas, 64GB, Wi-Fi',
+    normalPrice: '$1.199.900',
+    discountedPrice: '$959.510',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
-    name: 'Razer Blade 15',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727762136/148_wyphb7.png',
+    name: 'Google Pixel Slate',
     rating: 4.8,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$23.380.000',
-    discountedPrice: '$11.690.000',
-    category: 'Computadores'
+    features: '12.3 pulgadas, 128GB, Wi-Fi',
+    normalPrice: '$3.380.000',
+    discountedPrice: '$2.690.000',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
-    name: 'HP Envy x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761952/149_fztt8f.png',
+    name: 'Sony Xperia Z4 Tablet',
     rating: 4.5,
-    features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.900.400',
-    discountedPrice: '$3.705.380',
-    category: 'Computadores'
+    features: '10.1 pulgadas, 32GB, Wi-Fi',
+    normalPrice: '$1.400.400',
+    discountedPrice: '$1.205.380',
+    category: 'Tabletas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
-    name: 'LG Gram 17',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761954/150_tpzury.png',
+    name: 'Acer Iconia Tab 10',
     rating: 4.7,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.140.000',
-    discountedPrice: '$6.426.000',
-    category: 'Computadores'
+    features: '10 pulgadas, 32GB, Wi-Fi',
+    normalPrice: '$740.000',
+    discountedPrice: '$626.000',
+    category: 'Tabletas'
   }
 ];
 
-export const ProductListPLP = () => {
+export const PLPTabletas = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-  const location=useLocation();
-  const {name,link}:itemprops= location.state;
-  CategoryLink({name,link:"#"});
-  let arraylinks=plpBreadCrumb({name,link});
+  const location = useLocation();
+  const { name, link }: itemprops = location.state;
+  CategoryLink({ name, link: "#" });
+  let arraylinks = plpBreadCrumb({ name, link });
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
@@ -127,10 +129,10 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-      <Breadcrumb blinks={arraylinks}/>
+      <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBox />
+          <FilterBoxTabletas />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

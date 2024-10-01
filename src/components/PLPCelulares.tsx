@@ -1,110 +1,112 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-
 import ProductItem from './ProductItem';
-import FilterBox from './FilterBox'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxCelulares from './FilterBoxCelulares';
+
+const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
-    name: 'Lenovo ThinkPad X1 Carbon',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760172/51_nsexui.png',
+    name: 'iPhone 13 Pro',
     rating: 5.0,
-    features: 'Intel i7, 16GB RAM, 512GB SSD',
-    normalPrice: '$3.599.900',
-    discountedPrice: '$2.879.200'
+    features: '128GB, 6.1 pulgadas, Triple cámara',
+    normalPrice: '$4.599.900',
+    discountedPrice: '$4.079.200'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
-    name: 'HP Spectre x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760272/52_gp3nnv.png',
+    name: 'Samsung Galaxy S21',
     rating: 4.5,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$6.499.000',
-    discountedPrice: '$3.199.000'
+    features: '256GB, 6.2 pulgadas, Triple cámara',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.499.000'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
-    name: 'Dell XPS 13',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760274/53_k0st2t.png',
+    name: 'Google Pixel 6',
     rating: 4.0,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.999.000',
-    discountedPrice: '$6.499.000'
+    features: '128GB, 6.4 pulgadas, Doble cámara',
+    normalPrice: '$2.999.000',
+    discountedPrice: '$2.499.000'
   },
   // Agrega más productos aquí
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
-    name: 'Apple MacBook Air',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760277/54_plkvsk.png',
+    name: 'OnePlus 9 Pro',
     rating: 4.9,
-    features: 'Apple M1, 8GB RAM, 256GB SSD',
-    normalPrice: '$399.000',
-    discountedPrice: '$3.059.100',
-    category: 'Computadores'
+    features: '256GB, 6.7 pulgadas, Cuádruple cámara',
+    normalPrice: '$3.999.000',
+    discountedPrice: '$3.599.100',
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
-    name: 'Asus ZenBook 14',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760279/55_euhe8x.png',
+    name: 'Xiaomi Mi 11',
     rating: 4.6,
-    features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
-    normalPrice: '$4.999.000',
-    discountedPrice: '$3.999.200',
-    category: 'Computadores'
+    features: '128GB, 6.81 pulgadas, Triple cámara',
+    normalPrice: '$2.999.000',
+    discountedPrice: '$2.799.200',
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
-    name: 'Acer Swift 3',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760175/56_lym7qn.png',
+    name: 'Sony Xperia 1 III',
     rating: 4.3,
-    features: 'Intel i5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.039.920',
-    discountedPrice: '$2.431.920',
-    category: 'Computadores'
+    features: '256GB, 6.5 pulgadas, Cuádruple cámara',
+    normalPrice: '$3.499.920',
+    discountedPrice: '$3.231.920',
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
-    name: 'Microsoft Surface Laptop 4',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760282/57_xknn2h.png',
+    name: 'Huawei P40 Pro',
     rating: 4.7,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$8.993.900',
-    discountedPrice: '$8.094.510',
-    category: 'Computadores'
+    features: '256GB, 6.58 pulgadas, Cuádruple cámara',
+    normalPrice: '$3.993.900',
+    discountedPrice: '$3.794.510',
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
-    name: 'Razer Blade 15',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760863/58_fmwdxm.png',
+    name: 'Oppo Find X3 Pro',
     rating: 4.8,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$23.380.000',
-    discountedPrice: '$11.690.000',
-    category: 'Computadores'
+    features: '256GB, 6.7 pulgadas, Cuádruple cámara',
+    normalPrice: '$4.380.000',
+    discountedPrice: '$3.990.000',
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
-    name: 'HP Envy x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760285/59_nbdt3k.png',
+    name: 'Motorola Edge Plus',
     rating: 4.5,
-    features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
+    features: '256GB, 6.7 pulgadas, Triple cámara',
     normalPrice: '$3.900.400',
     discountedPrice: '$3.705.380',
-    category: 'Computadores'
+    category: 'Celulares'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
-    name: 'LG Gram 17',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727760287/60_hpk93a.png',
+    name: 'Nokia 8.3 5G',
     rating: 4.7,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.140.000',
-    discountedPrice: '$6.426.000',
-    category: 'Computadores'
+    features: '128GB, 6.81 pulgadas, Cuádruple cámara',
+    normalPrice: '$2.140.000',
+    discountedPrice: '$1.926.000',
+    category: 'Celulares'
   }
 ];
 
-export const ProductListPLP = () => {
+export const PLPCelulares = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-  const location=useLocation();
-  const {name,link}:itemprops= location.state;
-  CategoryLink({name,link:"#"});
-  let arraylinks=plpBreadCrumb({name,link});
+  const location = useLocation();
+  const { name, link }: itemprops = location.state;
+  CategoryLink({ name, link: "#" });
+  let arraylinks = plpBreadCrumb({ name, link });
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
@@ -127,10 +129,10 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-      <Breadcrumb blinks={arraylinks}/>
+      <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBox />
+          <FilterBoxCelulares />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
