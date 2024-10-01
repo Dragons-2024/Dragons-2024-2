@@ -8,7 +8,7 @@ import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
 import FilterBoxClimatizacion from './FilterBoxClimatizacion';
 
-const placeholderImage = 'https://via.placeholder.com/150';
+
 
 const products = [
   {

@@ -8,7 +8,6 @@ import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
 import FilterBoxTabletas from './FilterBoxTabletas';
 
-const placeholderImage = 'https://via.placeholder.com/150';
 
 const products = [
   {
