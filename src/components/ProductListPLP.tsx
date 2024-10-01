@@ -19,7 +19,7 @@ import { useLocation } from 'react-router-dom';
 
 const products = [
   {
-    img: computadora1,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
     name: 'Lenovo ThinkPad X1 Carbon',
     rating: 5.0,
     features: 'Intel i7, 16GB RAM, 512GB SSD',
@@ -27,7 +27,7 @@ const products = [
     discountedPrice: '$2.879.200'
   },
   {
-    img: computadora2,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
     name: 'HP Spectre x360',
     rating: 4.5,
     features: 'Intel i5, 8GB RAM, 256GB SSD',
@@ -35,7 +35,7 @@ const products = [
     discountedPrice: '$3.199.000'
   },
   {
-    img: computadora3,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
     name: 'Dell XPS 13',
     rating: 4.0,
     features: 'Intel i7, 16GB RAM, 1TB SSD',
@@ -44,7 +44,7 @@ const products = [
   },
   // Agrega más productos aquí
   {
-    img: computadora4,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
     name: 'Apple MacBook Air',
     rating: 4.9,
     features: 'Apple M1, 8GB RAM, 256GB SSD',
@@ -53,7 +53,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora5,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
     name: 'Asus ZenBook 14',
     rating: 4.6,
     features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
@@ -62,7 +62,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora6,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
     name: 'Acer Swift 3',
     rating: 4.3,
     features: 'Intel i5, 8GB RAM, 512GB SSD',
@@ -71,7 +71,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora7,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
     name: 'Microsoft Surface Laptop 4',
     rating: 4.7,
     features: 'Intel i5, 8GB RAM, 256GB SSD',
@@ -80,7 +80,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora8,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
     name: 'Razer Blade 15',
     rating: 4.8,
     features: 'Intel i7, 16GB RAM, 1TB SSD',
@@ -89,7 +89,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora9,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
     name: 'HP Envy x360',
     rating: 4.5,
     features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
@@ -98,7 +98,7 @@ const products = [
     category: 'Computadores'
   },
   {
-    img: computadora10,
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
     name: 'LG Gram 17',
     rating: 4.7,
     features: 'Intel i7, 16GB RAM, 1TB SSD',
