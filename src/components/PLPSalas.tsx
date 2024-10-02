@@ -1,110 +1,112 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-
 import ProductItem from './ProductItem';
-import FilterBox from './FilterBox'; // Importa el componente FilterBox
+ // Importa el componente FilterBox
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
+import FilterBoxSalas from './FilterBoxSalas';
+
+
 
 const products = [
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
-    name: 'Lenovo ThinkPad X1 Carbon',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761756/121_ptkdur.png',
+    name: 'Sofá de Cuero',
     rating: 5.0,
-    features: 'Intel i7, 16GB RAM, 512GB SSD',
-    normalPrice: '$3.599.900',
-    discountedPrice: '$2.879.200'
+    features: 'Sofá de 3 plazas, cuero genuino',
+    normalPrice: '$2.599.900',
+    discountedPrice: '$2.079.200'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
-    name: 'HP Spectre x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761767/122_jptly7.png',
+    name: 'Mesa de Centro Moderna',
     rating: 4.5,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$6.499.000',
-    discountedPrice: '$3.199.000'
+    features: 'Mesa de centro de vidrio templado',
+    normalPrice: '$899.000',
+    discountedPrice: '$719.000'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
-    name: 'Dell XPS 13',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761769/123_exabgx.png',
+    name: 'Sillón Reclinable',
     rating: 4.0,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.999.000',
-    discountedPrice: '$6.499.000'
+    features: 'Sillón reclinable de tela',
+    normalPrice: '$1.299.000',
+    discountedPrice: '$1.039.000'
   },
   // Agrega más productos aquí
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
-    name: 'Apple MacBook Air',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761774/124_rfsqw8.png',
+    name: 'Estantería de Madera',
     rating: 4.9,
-    features: 'Apple M1, 8GB RAM, 256GB SSD',
-    normalPrice: '$399.000',
-    discountedPrice: '$3.059.100',
-    category: 'Computadores'
+    features: 'Estantería de madera de 5 niveles',
+    normalPrice: '$799.000',
+    discountedPrice: '$639.100',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
-    name: 'Asus ZenBook 14',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761772/125_ocdbmx.png',
+    name: 'Lámpara de Pie',
     rating: 4.6,
-    features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
-    normalPrice: '$4.999.000',
-    discountedPrice: '$3.999.200',
-    category: 'Computadores'
+    features: 'Lámpara de pie con luz LED',
+    normalPrice: '$499.000',
+    discountedPrice: '$399.200',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
-    name: 'Acer Swift 3',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761780/126_ohcdsf.png',
+    name: 'Alfombra Moderna',
     rating: 4.3,
-    features: 'Intel i5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.039.920',
-    discountedPrice: '$2.431.920',
-    category: 'Computadores'
+    features: 'Alfombra de 200x300 cm',
+    normalPrice: '$1.039.920',
+    discountedPrice: '$831.920',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
-    name: 'Microsoft Surface Laptop 4',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761782/127_zy4yxc.png',
+    name: 'Mesa Auxiliar',
     rating: 4.7,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$8.993.900',
-    discountedPrice: '$8.094.510',
-    category: 'Computadores'
+    features: 'Mesa auxiliar de madera',
+    normalPrice: '$399.900',
+    discountedPrice: '$319.510',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
-    name: 'Razer Blade 15',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761785/128_csc8fi.png',
+    name: 'Cuadro Decorativo',
     rating: 4.8,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$23.380.000',
-    discountedPrice: '$11.690.000',
-    category: 'Computadores'
+    features: 'Cuadro decorativo de 100x70 cm',
+    normalPrice: '$380.000',
+    discountedPrice: '$290.000',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
-    name: 'HP Envy x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761778/129_rhrjsn.png',
+    name: 'Cojines Decorativos',
     rating: 4.5,
-    features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.900.400',
-    discountedPrice: '$3.705.380',
-    category: 'Computadores'
+    features: 'Set de 4 cojines decorativos',
+    normalPrice: '$140.400',
+    discountedPrice: '$105.380',
+    category: 'Salas'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
-    name: 'LG Gram 17',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727761787/130_klwefo.png',
+    name: 'Mueble para TV',
     rating: 4.7,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.140.000',
-    discountedPrice: '$6.426.000',
-    category: 'Computadores'
+    features: 'Mueble para TV de hasta 55 pulgadas',
+    normalPrice: '$740.000',
+    discountedPrice: '$626.000',
+    category: 'Salas'
   }
 ];
 
-export const ProductListPLP = () => {
+export const PLPSalas = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-  const location=useLocation();
-  const {name,link}:itemprops= location.state;
-  CategoryLink({name,link:"#"});
-  let arraylinks=plpBreadCrumb({name,link});
+  const location = useLocation();
+  const { name, link }: itemprops = location.state;
+  CategoryLink({ name, link: "#" });
+  let arraylinks = plpBreadCrumb({ name, link });
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
@@ -127,10 +129,10 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-      <Breadcrumb blinks={arraylinks}/>
+      <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBox />
+          <FilterBoxSalas />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">

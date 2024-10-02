@@ -1,52 +1,60 @@
+import FeaturedProduct from "../components/FeaturedProducts";
 import { categories } from "../core/interfaces/categories";
 
-export type itemprops={
-    name:string;
-    link:string;
+export type itemprops = {
+  name: string;
+  link: string;
 }
 
-type itemlistprops={
-    id:number;
-    name:string;
-    link:string;
+type itemlistprops = {
+  id: number;
+  name: string;
+  link: string;
 }
 
 
-export let BreadcrumbLinks:itemlistprops[]=[];
+export let BreadcrumbLinks: itemlistprops[] = [];
 
 export function HomeBreadcrumb() {
-    return BreadcrumbLinks=[];
+  return BreadcrumbLinks = [];
 }
 
-export function SearchCategory(name:string){
-    let categoryname;
-   categories.map((category)=>(
-    category.subcategories.map((subcategory)=>{
-        if(subcategory.name===name){
-            categoryname=category.name;
-      }}      
-   )))
-   
-   if(categoryname===undefined){
+export function SearchCategory(name: string) {
+  let categoryname;
+  categories.map((category) => (
+    category.subcategories.map((subcategory) => {
+      if (subcategory.name === name) {
+        categoryname = category.name;
+      }
+    }
+    )))
+
+  if (categoryname === undefined) {
     return "";
-   }else{
+  } else {
     return categoryname;
-   }
-   
+  }
+
 }
 
-export function CategoryLink({name,link}:itemprops){
-    const namecate=SearchCategory(name);
-    BreadcrumbLinks=[];
-    BreadcrumbLinks[0]={id:1,name:namecate,link:link}
+export function CategoryLink({ name, link }: itemprops) {
+  const namecate = SearchCategory(name);
+  BreadcrumbLinks = [];
+  BreadcrumbLinks[0] = { id: 1, name: namecate, link: link }
 }
 
-export function plpBreadCrumb({name,link}:itemprops){
-  if(BreadcrumbLinks[2]===undefined){
-    BreadcrumbLinks[1]={id:2,name:name, link:link};
-  }else{
-    BreadcrumbLinks.splice(2,1)
-    BreadcrumbLinks[1]={id:2,name:name, link:link};
+export function plpBreadCrumb({ name, link }: itemprops) {
+  if (BreadcrumbLinks[2] === undefined) {
+    BreadcrumbLinks[1] = { id: 2, name: name, link: link };
+  } else {
+    BreadcrumbLinks.splice(2, 1)
+    BreadcrumbLinks[1] = { id: 2, name: name, link: link };
   }
   return BreadcrumbLinks;
+}
+
+export function FeaturedPdpB(name:string){
+  BreadcrumbLinks[0]={id:1,name:"Tecnologia",link:"#"};
+  BreadcrumbLinks[1]={id:2,name:"Computadores",link:"#"};
+  BreadcrumbLinks[2]={id:3,name:name,link:"#"};
 }

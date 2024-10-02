@@ -1,20 +1,16 @@
-type PromoImg ={
-   img:string;
-   alt:string;
-}
+import { imgspropstype } from "../core/interfaces/PromotionalImages";
 
-type PromoImgs ={
-   id:number
-   img:string;
-   alt:string;
-}
-
-export type imgspropstype={
-    imgs:PromoImgs[];
-}
-
-export function PromotionalImage({img,alt}:PromoImg){
-    return(
-        <img className="w-full h-auto object-cover max-w-full" src={img} alt={alt} />
+export function PromotionalImages({ imgs }: imgspropstype) {
+    return (
+        <>
+            {imgs.map(({ id, image, name }) => (
+                <img
+                    key={id}
+                    className="w-full h-auto object-cover max-w-full"
+                    src={image}
+                    alt={name}
+                />
+            ))}
+        </>
     );
 }

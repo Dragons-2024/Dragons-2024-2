@@ -3,15 +3,14 @@ import FeaturedProduct from './FeaturedProducts';
 import { FeaturedProductProps} from '../core/interfaces/FeaturedProductsInter';
 import { useFeaturedProducts } from '../hooks/useFeaturedProducts'; 
 import ErrorMessage from './ErrorMessage'; 
+import { Loading } from './Loading';
 
 const FeaturedProductsList: React.FC = () => {
   const { data: products = [], error, isLoading } = useFeaturedProducts();
 
   if (isLoading) {
     return (
-      <div className="font-poppins flex items-center justify-center h-full">
-        <div className="text-4xl font-bold text-gray-600 animate-bounce">Cargando...</div>
-      </div>
+      <Loading /> 
     );
   }
 

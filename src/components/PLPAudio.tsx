@@ -1,110 +1,111 @@
 import React, { useState } from 'react';
 import { Main } from '../layout/Main';
-
 import ProductItem from './ProductItem';
-import FilterBox from './FilterBox'; // Importa el componente FilterBox
+import FilterBoxAudio from './FilterBoxAudio'; // Importa el componente FilterBoxAudio
 import promo4 from '../assets/Promotional_Images/promo4.png'; // Importa la imagen promo4
 import { CategoryLink, itemprops, plpBreadCrumb } from '../utils/BreadcrumbData';
 import { Breadcrumb } from './Breadcrumb';
 import { useLocation } from 'react-router-dom';
 
+
+
 const products = [
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753334/11_gbi0t4.png',
-    name: 'Lenovo ThinkPad X1 Carbon',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759685/21_tyhveq.png',
+    name: 'Sony WH-1000XM4',
     rating: 5.0,
-    features: 'Intel i7, 16GB RAM, 512GB SSD',
-    normalPrice: '$3.599.900',
-    discountedPrice: '$2.879.200'
+    features: 'Auriculares inalámbricos con cancelación de ruido',
+    normalPrice: '$1.299.900',
+    discountedPrice: '$1.039.200'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753363/12_c1nlyn.png',
-    name: 'HP Spectre x360',
+    img:'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759699/22_e8xr3h.png',
+    name: 'Bose SoundLink Revolve',
     rating: 4.5,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$6.499.000',
-    discountedPrice: '$3.199.000'
+    features: 'Altavoz Bluetooth portátil',
+    normalPrice: '$899.000',
+    discountedPrice: '$719.000'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753464/13_gikrvr.png',
-    name: 'Dell XPS 13',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759714/23_gujhru.png',
+    name: 'JBL Charge 4',
     rating: 4.0,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.999.000',
-    discountedPrice: '$6.499.000'
+    features: 'Altavoz Bluetooth portátil resistente al agua',
+    normalPrice: '$599.000',
+    discountedPrice: '$499.000'
   },
   // Agrega más productos aquí
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753478/14_gpjcz7.png',
-    name: 'Apple MacBook Air',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759724/24_soyomi.png',
+    name: 'Sennheiser HD 450BT',
     rating: 4.9,
-    features: 'Apple M1, 8GB RAM, 256GB SSD',
-    normalPrice: '$399.000',
-    discountedPrice: '$3.059.100',
-    category: 'Computadores'
+    features: 'Auriculares inalámbricos con cancelación de ruido',
+    normalPrice: '$799.000',
+    discountedPrice: '$639.100',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753490/15_dbwxdg.png',
-    name: 'Asus ZenBook 14',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759745/25_fuub8h.png',
+    name: 'Marshall Stanmore II',
     rating: 4.6,
-    features: 'AMD Ryzen 7, 16GB RAM, 512GB SSD',
-    normalPrice: '$4.999.000',
-    discountedPrice: '$3.999.200',
-    category: 'Computadores'
+    features: 'Altavoz Bluetooth',
+    normalPrice: '$1.499.000',
+    discountedPrice: '$1.199.200',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753503/16_eflo8v.png',
-    name: 'Acer Swift 3',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759760/26_fmil2k.png',
+    name: 'Bang & Olufsen Beoplay A1',
     rating: 4.3,
-    features: 'Intel i5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.039.920',
-    discountedPrice: '$2.431.920',
-    category: 'Computadores'
+    features: 'Altavoz Bluetooth portátil',
+    normalPrice: '$1.039.920',
+    discountedPrice: '$831.920',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753515/17_qvjhxf.png',
-    name: 'Microsoft Surface Laptop 4',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759765/27_rzpege.png',
+    name: 'Apple AirPods Pro',
     rating: 4.7,
-    features: 'Intel i5, 8GB RAM, 256GB SSD',
-    normalPrice: '$8.993.900',
-    discountedPrice: '$8.094.510',
-    category: 'Computadores'
+    features: 'Auriculares inalámbricos con cancelación de ruido',
+    normalPrice: '$1.199.900',
+    discountedPrice: '$959.510',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753549/18_dmiamn.png',
-    name: 'Razer Blade 15',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759770/28_nbqi8p.png',
+    name: 'Sonos One',
     rating: 4.8,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$23.380.000',
-    discountedPrice: '$11.690.000',
-    category: 'Computadores'
+    features: 'Altavoz inteligente con control por voz',
+    normalPrice: '$1.380.000',
+    discountedPrice: '$1.190.000',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753564/19_mjvmhk.png',
-    name: 'HP Envy x360',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759776/29_vgopyr.png',
+    name: 'Bose QuietComfort 35 II',
     rating: 4.5,
-    features: 'AMD Ryzen 5, 8GB RAM, 512GB SSD',
-    normalPrice: '$3.900.400',
-    discountedPrice: '$3.705.380',
-    category: 'Computadores'
+    features: 'Auriculares inalámbricos con cancelación de ruido',
+    normalPrice: '$1.400.400',
+    discountedPrice: '$1.205.380',
+    category: 'Audio'
   },
   {
-    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727753576/20_m3oazn.png',
-    name: 'LG Gram 17',
+    img: 'https://res.cloudinary.com/dgdcjwkyx/image/upload/v1727759797/30_ilr77o.png',
+    name: 'Ultimate Ears Boom 3',
     rating: 4.7,
-    features: 'Intel i7, 16GB RAM, 1TB SSD',
-    normalPrice: '$7.140.000',
-    discountedPrice: '$6.426.000',
-    category: 'Computadores'
+    features: 'Altavoz Bluetooth portátil resistente al agua',
+    normalPrice: '$740.000',
+    discountedPrice: '$626.000',
+    category: 'Audio'
   }
 ];
 
-export const ProductListPLP = () => {
+export const PLPAudio = () => {
   const [sortCriteria, setSortCriteria] = useState('rating');
-  const location=useLocation();
-  const {name,link}:itemprops= location.state;
-  CategoryLink({name,link:"#"});
-  let arraylinks=plpBreadCrumb({name,link});
+  const location = useLocation();
+  const { name, link }: itemprops = location.state;
+  CategoryLink({ name, link: "#" });
+  let arraylinks = plpBreadCrumb({ name, link });
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortCriteria(event.target.value);
@@ -127,10 +128,10 @@ export const ProductListPLP = () => {
 
   return (
     <Main>
-      <Breadcrumb blinks={arraylinks}/>
+      <Breadcrumb blinks={arraylinks} />
       <div className="flex flex-col md:flex-row bg-gray-100 min-h-screen">
         <aside className="w-full md:w-1/4 p-4 bg-gray-100 rounded-lg mb-4">
-          <FilterBox />
+          <FilterBoxAudio />
         </aside>
         <section className="w-full md:w-3/4 p-4">
           <div className="list-header flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
