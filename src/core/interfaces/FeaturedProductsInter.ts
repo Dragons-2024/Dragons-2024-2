@@ -8,6 +8,9 @@
     discount: string;
     slug: string;
     description:string;
+    details:{
+      [key:string]:string;
+    }
   }
 
 

@@ -1,17 +1,17 @@
 import { axiosApi } from '../api/axios';
-import { FeaturedProductsListProps } from '../core/interfaces/FeaturedProductsInter';
+import { FeaturedProductProps } from '../core/interfaces/FeaturedProductsInter';
 
 type pdpProps={
   id:number;
   category:String;
 }
 
-export const getPdpProductFeatured = async (id:number): Promise<FeaturedProductsListProps['products']> => {
+export const getPdpProductFeatured = async (id:number): Promise<FeaturedProductProps> => {
   const response = await axiosApi.get(`http://localhost:3000/featuredproducts/${id}`);
   return response.data;
 };
 
-export const getPdpProductPlp = async ({id,category}:pdpProps): Promise<FeaturedProductsListProps['products']> => {
+export const getPdpProductPlp = async ({id,category}:pdpProps): Promise<FeaturedProductProps> => {
   const response = await axiosApi.get(`http://localhost:3000/${category}/${id}`);
   return response.data;
 };
