@@ -1,4 +1,12 @@
 
+type DetailValue = string;
+
+interface Details {
+   [key: string]: DetailValue; 
+ }
+
+
+
  export interface FeaturedProductProps {
     id: number;
     image: string;
@@ -8,6 +16,9 @@
     discount: string;
     slug: string;
     description:string;
+    details:{
+      [key:string]:string;
+    };
   }
 
 
@@ -21,6 +32,7 @@
       image: string;
       slug: string;
       description:string;
+      details:Details;
     }[];
   }
     

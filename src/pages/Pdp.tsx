@@ -8,10 +8,12 @@ import { BreadcrumbLinks, FeaturedPdpB } from "../utils/BreadcrumbData";
 import { Breadcrumb } from "../components/Breadcrumb";
 
 
+
 type pdpProps={
   id:number;
   category:String;
 }
+
 
 export function Pdp(){
    const {name}=useParams(); 
@@ -25,10 +27,11 @@ export function Pdp(){
    }
  }
  
+ 
 
  const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category});
 
-
+ 
   
   
   if (isLoading) {
@@ -49,16 +52,22 @@ export function Pdp(){
     );
   }
 
-   
-
-   return (
-    <Main>
-        <Breadcrumb blinks={BreadcrumbLinks} />
-        <div className="mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
-        <h1 className="text-3xl text-blue-950 font-semibold max-[768px]:text-center 
-        xl:text-4xl xl:text-left">{name}</h1>
-        <ProductDetail name={product.name} img={product.image} description={product.description}/>
-        </div>
-    </Main>
-   );
-}
+  
+ 
+  if (product!==undefined) {
+    return (
+      <Main>
+          <Breadcrumb blinks={BreadcrumbLinks} />
+          <div className="mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
+          <h1 className="text-3xl text-blue-950 font-semibold max-[768px]:text-center 
+          xl:text-4xl xl:text-left">{name}</h1>
+            <ProductDetail name={product.name} image={product.image} 
+            description={product.description} />
+        
+          </div>
+          
+          
+      </Main>
+     );
+    }
+   }
