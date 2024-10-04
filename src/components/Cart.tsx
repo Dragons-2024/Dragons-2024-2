@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Main } from "../layout/Main";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { BreadcrumbLinks, AddCartToBreadcrumb } from "../utils/BreadcrumbData";
+
 
 // Interfaz para los productos del carrito
 interface Product {
@@ -90,33 +93,31 @@ export const Cart = () => {
     return subtotal + taxes + cart.shipping - cart.discount;
   };
 
+  AddCartToBreadcrumb();
+
   return (
     <Main>
+      <Breadcrumb blinks={BreadcrumbLinks} />
+
       <section className="mx-8">
         <section>
-          <h1 className="text-2xl md:text-3xl font-bold text-center text-blue-600 mb-8">
+          <h1 className="font-poppins text-2xl md:text-3xl font-bold text-center text-blue-600 mb-8">
             Carrito de Compras
           </h1>
-          <span className="text-blue-800">
-            <a href="/" className="hover:underline">
-              Inicio
-            </a>{" "}
-            &gt; <span>Carrito</span>
-          </span>
         </section>
 
         {/* Selección de método de envío general */}
         <section className="mt-8">
-          <h2 className="text-xl font-semibold text-blue-600 mb-6">
+          <h2 className="font-poppins text-xl font-semibold text-blue-600 mb-6">
             Método de envío
           </h2>
-          <div className="flex space-x-4 text-lg">
+          <div className="font-poppins flex space-x-4 text-lg">
             <label>
               <input
                 type="radio"
                 name="shipping"
-                checked={shippingMethod === "Estandar"}
-                onChange={() => setShippingMethod("Estandar")}
+                checked={shippingMethod === "Estándar"}
+                onChange={() => setShippingMethod("Estándar")}
                 className="mr-2"
               />
               Estandar
@@ -144,13 +145,13 @@ export const Cart = () => {
           </div>
         </section>
 
-        <div className="flex flex-col md:flex-row items-start mb-4 md:space-x-10 mt-8">
+        <div className="font-poppins flex flex-col md:flex-row items-start mb-4 md:space-x-10 mt-8">
           {/* Listado de productos */}
           <section className="w-full md:w-3/5 bg-white rounded-lg space-y-2">
             {cart.products.map((product) => (
               <div
                 key={product.id}
-                className="grid grid-cols-2 gap-4  bg-white border rounded-lg border-blue-600 p-4 "
+                className="font-poppins grid grid-cols-2 gap-4  bg-white border rounded-lg border-blue-600 p-4 "
               >
                 <figure className="col-span-1 flex justify-center">
                   <img
@@ -166,7 +167,7 @@ export const Cart = () => {
 
                   <div className="flex flex-col justify-center space-y-4">
                     <div className="md:flex items-center md:space-x-4">
-                      <label className="flex text-lg  items-center">
+                      <label className="font-poppins flex text-lg  items-center">
                         Cantidad:
                         <select
                           value={product.quantity}

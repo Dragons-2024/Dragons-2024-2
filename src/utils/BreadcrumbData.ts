@@ -58,3 +58,8 @@ export function FeaturedPdpB(name:string){
   BreadcrumbLinks[1]={id:2,name:"Computadores",link:"#"};
   BreadcrumbLinks[2]={id:3,name:name,link:"#"};
 }
+
+export function AddCartToBreadcrumb() {
+  BreadcrumbLinks[0] = { id: 1, name: 'Carrito', link: '/Cart' };  
+  return BreadcrumbLinks;
+}
