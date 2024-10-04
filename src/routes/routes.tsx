@@ -17,11 +17,18 @@ import { PLPCamaras } from '../components/PLPCamaras';
 import { PLPImpresion } from '../components/PLPImpresion';
 import { PLPVideo } from '../components/PLPVideo';
 import { PLPRefrigeracion } from '../components/PLPRefrigeracion';
+import { Cart } from "../components/Cart";
 import { Pdp } from "../pages/Pdp";
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <div>404 Not Found</div>, 
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
     errorElement: <div>404 Not Found</div>, 
   },
   {

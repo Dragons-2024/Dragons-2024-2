@@ -1,4 +1,8 @@
 
+
+
+
+
  export interface FeaturedProductProps {
     id: number;
     image: string;

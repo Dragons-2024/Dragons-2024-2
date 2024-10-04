@@ -1,11 +1,12 @@
-type detailsprops={
+
+
+type ProductDetailProps={
     name:string;
     image:string;
     description:string;
 }
 
-
-export function ProductDetail({name,image,description}:detailsprops){
+export function ProductDetail({name,image,description}:ProductDetailProps){
    return(
     <section className="flex flex-wrap gap-20 my-10 items-center max-[768px]:flex-col 
     max-[768px]:text-center max-[768px]:gap-10">

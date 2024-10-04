@@ -7,11 +7,11 @@ type pdpProps={
 }
 
 export const getPdpProductFeatured = async (id:number): Promise<PlpProductProps> => {
-  const response = await axiosApi.get(`http://localhost:3000/featuredproducts/${id}`);
+  const response = await axiosApi.get(`https://dragons-2024-2-api.onrender.com/featuredproducts/${id}`);
   return response.data;
 };
 
 export const getPdpProductPlp = async ({id,category}:pdpProps): Promise<PlpProductProps> => {
-  const response = await axiosApi.get(`http://localhost:3000/${category}/${id}`);
+  const response = await axiosApi.get(`https://dragons-2024-2-api.onrender.com/${category}/${id}`);
   return response.data;
 };
