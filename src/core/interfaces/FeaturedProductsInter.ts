@@ -12,6 +12,7 @@
     discount: string;
     slug: string;
     description:string;
+
   }
 
 

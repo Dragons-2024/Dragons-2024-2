@@ -1,3 +1,4 @@
+
 export interface PlpProductProps {
     id: number;
     image: string;
@@ -28,3 +29,4 @@ export interface PlpProductProps {
        }
     }[];
   }
+    
