@@ -1,3 +1,4 @@
+import FeaturedProduct from "../components/FeaturedProducts";
 import { categories } from "../core/interfaces/categories";
 
 export type itemprops = {
@@ -50,4 +51,10 @@ export function plpBreadCrumb({ name, link }: itemprops) {
     BreadcrumbLinks[1] = { id: 2, name: name, link: link };
   }
   return BreadcrumbLinks;
+}
+
+export function FeaturedPdpB(name:string){
+  BreadcrumbLinks[0]={id:1,name:"Tecnologia",link:"#"};
+  BreadcrumbLinks[1]={id:2,name:"Computadores",link:"#"};
+  BreadcrumbLinks[2]={id:3,name:name,link:"#"};
 }
