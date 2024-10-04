@@ -9,12 +9,10 @@ import { Breadcrumb } from "../components/Breadcrumb";
 import { ProductEspecification } from "../components/ProductEspecification";
 
 
-
 type pdpProps={
   id:number;
   category:String;
 }
-
 
 export function Pdp(){
    const {name}=useParams(); 
@@ -28,11 +26,10 @@ export function Pdp(){
    }
  }
  
- 
 
  const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category});
 
- 
+
   
   
   if (isLoading) {
