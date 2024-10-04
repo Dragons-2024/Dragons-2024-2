@@ -22,12 +22,12 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
       {products.map((product) => (
         <ProductItem
         key={product.id}
-        img={product.image} // Mapea la prop image a img
+        img={product.image} 
         name={product.name}
         rating={product.rating}
-        features={product.features} // Mapea la prop description a features
-        normalPrice={`$${product.price}`} // Formateamos el precio
-        discountedPrice={product.discountedPrice} // Precio con descuento
+        features={product.features} 
+        normalPrice={`$${product.price}`} 
+        discountedPrice={product.discountedPrice} 
         />
       ))}
     </div>
