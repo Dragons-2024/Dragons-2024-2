@@ -1,7 +1,7 @@
 
 export interface PlpProductProps {
     id: number;
-    image: string;
+    img: string;
     name: string;
     normalPrice: number;
     discountPrice: number;
@@ -21,7 +21,7 @@ export interface PlpProductProps {
       normalPrice: number;
       discountPrice: number;
       discount: string;
-      image: string;
+      img: string;
       slug: string;
       description:string;
       details:{

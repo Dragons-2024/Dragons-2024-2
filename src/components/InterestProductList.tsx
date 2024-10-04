@@ -47,9 +47,9 @@ export function InterestedProductList( {id,category}:InterestedProductList){
     const SelectedProducts=(selectproducts(id,products));
     console.log(SelectedProducts);
     return(    
-        <section className="mx-10">
-            <h2 className="text-blue-800 font-semibold mb-10">Te puede interesar</h2>
-        <div className="flex w-full justify-center gap-2 mx-4">
+        <section className="mx-auto my-10 lg:my-5 w-full">
+            <h2 className="text-blue-800 font-semibold mb-10 max-[769px]:text-center">Te puede interesar</h2>
+        <div className="flex justify-center gap-3 w-11/12 mx-auto max-[1251px]:flex-wrap">
             {SelectedProducts?.map((product)=>(
                 <InterestedProduct key={product.id} id={product.id} image={product.img} name={product.name}
                 price={product.normalPrice} discountprice={product.discountedPrice} slug={product.slug}

@@ -1,6 +1,5 @@
 import { axiosApi } from '../api/axios';
 import { PlpProductProps } from '../core/interfaces/PlpProductInter';
-import { CategoryProducts } from '../services/subcategories';
 
 type pdpProps={
   id:number;

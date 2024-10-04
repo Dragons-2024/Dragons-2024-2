@@ -7,7 +7,8 @@ type usePlpProductProps={
  op:boolean;
 }
 export const usePdpProduct = ({productId,category,op}:usePlpProductProps) => {
-  if (op){
+  if (op===true){
+    console.log("hola");
     return useQuery({
       queryKey: ['PdpProduct', productId], // Agregar el productId a la clave de consulta
       queryFn: ()=>getPdpProductFeatured(productId),

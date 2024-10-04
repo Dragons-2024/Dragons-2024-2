@@ -31,7 +31,6 @@ export function Pdp(){
 
  const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category,op:op});
 
-
   
   
   if (isLoading) {
@@ -57,15 +56,14 @@ export function Pdp(){
    if(product!==undefined){
     return (
       <Main>
-          <section className="font-poppins">
           <Breadcrumb blinks={BreadcrumbLinks} />
-          <div className="mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
-          <h1 className="text-3xl text-blue-950 font-semibold max-[768px]:text-center 
+          <section className="font-poppins mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
+          <h1 className=" text-3xl text-blue-950 font-semibold max-[768px]:text-center 
           xl:text-4xl xl:text-left">{name}</h1>
-          <ProductDetail name={product.name} img={product.image} description={product.description}/>
+          <ProductDetail name={product.name} image={product.img} description={product.description}/>
           <ProductEspecification details={product.details}/>
-          </div>
           <InterestedProductList id={product.id} category={category}/>
+          
           </section>
       </Main>
      );
