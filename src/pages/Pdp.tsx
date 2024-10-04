@@ -55,6 +55,7 @@ export function Pdp(){
    if(product!==undefined){
     return (
       <Main>
+          <section className="font-poppins">
           <Breadcrumb blinks={BreadcrumbLinks} />
           <div className="mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
           <h1 className="text-3xl text-blue-950 font-semibold max-[768px]:text-center 
@@ -62,6 +63,7 @@ export function Pdp(){
           <ProductDetail name={product.name} img={product.image} description={product.description}/>
           <ProductEspecification details={product.details}/>
           </div>
+          </section>
       </Main>
      );
    }
