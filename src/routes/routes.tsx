@@ -18,6 +18,7 @@ import { PLPImpresion } from '../components/PLPImpresion';
 import { PLPVideo } from '../components/PLPVideo';
 import { PLPRefrigeracion } from '../components/PLPRefrigeracion';
 import { Cart } from "../components/Cart";
+import { Pdp } from "../pages/Pdp";
 
 export const router = createBrowserRouter([
   {
@@ -109,6 +110,11 @@ export const router = createBrowserRouter([
     path: "/plp-bano",
     element: <PLPBaño />,
     errorElement: <div>404 Not Found</div>,
+  },
+    {
+      path:"/pdp/:name",
+      element:<Pdp/>,
+      errorElement: <div>404 Not Found</div>,
   }
 ], {
   basename: "/Dragons-2024-2"
