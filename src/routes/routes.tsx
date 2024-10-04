@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     errorElement: <div>404 Not Found</div>,
   },
   {
-    path: "/plp/:category", // Añadido :category como parámetro
+    path: "/plp/:category", 
     element: <ProductListPLP />,
     errorElement: <div>404 Not Found</div>,
   },

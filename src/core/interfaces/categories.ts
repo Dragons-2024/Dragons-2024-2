@@ -33,7 +33,7 @@ export const categories = [
         { name: "Salas", link: "/plp/sala" },
         { name: "Comedor", link: "/plp/comedor" },
         { name: "Cocina", link: "/plp/cocina" },
-        { name: "Baño", link: "/plp/baño" },
+        { name: "Baño", link: "/plp/bano" },
       ],
     },
   ];
