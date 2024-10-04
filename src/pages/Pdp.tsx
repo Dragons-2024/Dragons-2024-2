@@ -7,19 +7,21 @@ import { Loading } from "../components/Loading";
 import { BreadcrumbLinks, FeaturedPdpB } from "../utils/BreadcrumbData";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { ProductEspecification } from "../components/ProductEspecification";
+import { InterestedProductList } from "../components/InterestProductList";
 
 
 type pdpProps={
   id:number;
-  category:String;
+  category:string;
+  op:boolean;
 }
 
 export function Pdp(){
    const {name}=useParams(); 
     const location=useLocation();
-   var {id,category}:pdpProps= location.state;
+   var {id,category,op}:pdpProps= location.state;
  if(name!==undefined){
-  if(category===""){
+  if(op){
     FeaturedPdpB(name);
    }else{
      BreadcrumbLinks[2]={id:3,name:name,link:"#"}
@@ -27,7 +29,7 @@ export function Pdp(){
  }
  
 
- const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category});
+ const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category,op:op});
 
 
   
@@ -63,6 +65,7 @@ export function Pdp(){
           <ProductDetail name={product.name} img={product.image} description={product.description}/>
           <ProductEspecification details={product.details}/>
           </div>
+          <InterestedProductList id={product.id} category={category}/>
           </section>
       </Main>
      );
