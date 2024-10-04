@@ -1,4 +1,4 @@
-import FeaturedProduct from "../components/FeaturedProducts";
+
 import { categories } from "../core/interfaces/categories";
 
 export type itemprops = {
