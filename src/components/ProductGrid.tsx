@@ -1,15 +1,15 @@
-// src/components/ProductGrid.tsx
+
 import React from 'react';
 import ProductItem from './ProductItem';
 
 type Product = {
   id: number;
   name: string;
-  price: number; // Este será el precio normal
-  image: string; // Este será la imagen
-  features: string; // Lo mapearemos a features
+  price: number; 
+  image: string; 
+  features: string; 
   rating: number;
-  discountedPrice: string; // Precio con descuento
+  discountedPrice: string; 
 };
 
 type ProductGridProps = {

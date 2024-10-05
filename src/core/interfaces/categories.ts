@@ -3,11 +3,11 @@ export const categories = [
     {
       name: "Tecnología",
       subcategories: [
-        { name: "Computadores", link: "/plp/computador" },
-        { name: "Televisores", link: "/plp/tv" },
+        { name: "Computadores", link: "/plp/computadores" },
+        { name: "Televisores", link: "/plp/televisores" },
         { name: "Audio", link: "/plp/audio" },
         { name: "Video", link: "/plp/video" },
-        { name: "Impresión", link: "/plp/impresora" },
+        { name: "Impresión", link: "/plp/impresion" },
         { name: "Cámaras", link: "/plp/camara" },
       ],
     },
@@ -16,14 +16,14 @@ export const categories = [
       subcategories: [
         { name: "Climatización", link: "/plp/climatizacion" },
         { name: "Refrigeración", link: "/plp/refrigeracion" },
-        { name: "Lavadoras/Secadoras", link: "/plp/lavadora" },
+        { name: "Lavadoras/Secadoras", link: "/plp/LavadorasSecadoras" },
       ],
     },
     {
       name: "Celulares",
       subcategories: [
-        { name: "Celulares", link: "/plp/telefono" },
-        { name: "Tabletas", link: "/plp/tablet" },
+        { name: "Celulares", link: "/plp/celular" },
+        { name: "Tabletas", link: "/plp/tabletas" },
         { name: "Smartwatch", link: "/plp/smartwatch" },
       ],
     },
