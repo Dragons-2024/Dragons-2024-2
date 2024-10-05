@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Main } from '../layout/Main';
-import { CategoryLink, plpBreadCrumb } from '../utils/BreadcrumbData';
+import { BreadcrumbLinks, CategoryLink, plpBreadCrumb } from '../utils/BreadcrumbData';
 import promo4 from '../assets/Promotional_Images/promo4.png';
 import { useParams } from 'react-router-dom';
 import { Breadcrumb } from './Breadcrumb';
@@ -10,16 +10,12 @@ import FilterBox from './FilterBox';
 export const ProductListPLP = () => {
   const { category } = useParams<{ category: string }>();
 
-  useEffect(() => {
-    if (!category) {
-      console.error('Category is undefined');
-      return;
+    if (category!==undefined) {
+      const name = category.charAt(0).toUpperCase() + category.slice(1);
+      plpBreadCrumb({ name, link: `/${category}` });
     }
-    const name = category.charAt(0).toUpperCase() + category.slice(1);
-    CategoryLink({ name, link: `/${category}` });
-    plpBreadCrumb({ name, link: `/${category}` });
-  }, [category]);
-
+   
+ 
   return (
     <Main>
       {category ? (
