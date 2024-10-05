@@ -19,7 +19,7 @@ const FilterBox: React.FC = () => {
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const response = await fetch(''); // Adjust the URL as needed
+        const response = await fetch(`https://dragons-2024-2-api.onrender.com/Filtro${category}`); // Adjust the URL as needed
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

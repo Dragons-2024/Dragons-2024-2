@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { Main } from '../layout/Main';
-import { BreadcrumbLinks, CategoryLink, plpBreadCrumb } from '../utils/BreadcrumbData';
+import {  plpBreadCrumb } from '../utils/BreadcrumbData';
 import promo4 from '../assets/Promotional_Images/promo4.png';
 import { useParams } from 'react-router-dom';
 import { Breadcrumb } from './Breadcrumb';
