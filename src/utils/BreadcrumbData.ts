@@ -44,22 +44,18 @@ export function CategoryLink({ name, link }: itemprops) {
 }
 
 export function plpBreadCrumb({ name, link }: itemprops) {
-  if (BreadcrumbLinks[2] === undefined) {
-    BreadcrumbLinks[1] = { id: 2, name: name, link: link };
-  } else {
-    BreadcrumbLinks.splice(2, 1)
-    BreadcrumbLinks[1] = { id: 2, name: name, link: link };
-  }
+  BreadcrumbLinks=[];
+  BreadcrumbLinks[0] = { id: 1, name: name, link: link };
   return BreadcrumbLinks;
 }
 
 export function FeaturedPdpB(name:string){
-  BreadcrumbLinks[0]={id:1,name:"Tecnologia",link:"#"};
-  BreadcrumbLinks[1]={id:2,name:"Computadores",link:"#"};
-  BreadcrumbLinks[2]={id:3,name:name,link:"#"};
+  BreadcrumbLinks[0]={id:1,name:"Computadores",link:"#"};
+  BreadcrumbLinks[1]={id:2,name:name,link:"#"};
 }
 
 export function AddCartToBreadcrumb() {
+  BreadcrumbLinks=[];
   BreadcrumbLinks[0] = { id: 1, name: 'Carrito', link: '/Cart' };  
   return BreadcrumbLinks;
 }

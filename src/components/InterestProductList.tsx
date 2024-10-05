@@ -1,6 +1,6 @@
 import ErrorMessage from "../components/ErrorMessage";
 import {Loading} from "../components/Loading";
-import {useProductsBySubcategory} from "../hooks/useProducts";
+import {useProductsBycategory} from "../hooks/useProducts";
 import { InterestedProduct } from "./InterestedProduct";
 import {CategoryProducts} from "../services/subcategories"
 
@@ -24,7 +24,7 @@ type InterestedProductList={
 }
 
 export function InterestedProductList( {id,category}:InterestedProductList){
-    const { data: products, error, isLoading }= useProductsBySubcategory(category);  
+    const { data: products, error, isLoading }= useProductsBycategory(category);  
 
    
    

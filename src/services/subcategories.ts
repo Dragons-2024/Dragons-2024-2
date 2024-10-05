@@ -8,8 +8,8 @@ export interface CategoryProducts{
   features:string;
   normalPrice:string;
   discountedPrice:string;
-  description:string;
-  details:{
+  description?:string;
+  details?:{
     [key:string]:string;
   }
   slug:string;
@@ -17,7 +17,7 @@ export interface CategoryProducts{
 };
 
 export const getProductsBySubcategory = async (subcategoria: string):Promise<CategoryProducts[]> => {
-  const response = await axiosApi.get(`http://localhost:3000/${subcategoria}`);
+  const response = await axiosApi.get(`https://dragons-2024-2-api.onrender.com/${subcategoria}`);
   console.log(response);
   return response.data;
 };

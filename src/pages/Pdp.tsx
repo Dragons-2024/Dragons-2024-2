@@ -25,16 +25,18 @@ export function Pdp(){
    const {name}=useParams(); 
     const location=useLocation();
    var {id,category,op}:pdpProps= location.state;
- if(name!==undefined){
+   console.log(category);
+   const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category,op:op});
+ if(name!==undefined && product!==undefined){
   if(op){
-    FeaturedPdpB(name);
+    FeaturedPdpB(product.name);
    }else{
-     BreadcrumbLinks[2]={id:3,name:name,link:"#"}
+     BreadcrumbLinks[2]={id:3,name:product.name,link:"#"}
    }
  }
  
 
- const { data: product, error, isLoading }=usePdpProduct({productId:id,category:category,op:op});
+ 
 
   
   
@@ -64,7 +66,7 @@ export function Pdp(){
           <Breadcrumb blinks={BreadcrumbLinks} />
           <section className="font-poppins mx-auto my-0 py-5 px-0 w-11/12 max-w-7xl flex flex-col">
           <h1 className=" text-3xl text-blue-950 font-semibold max-[768px]:text-center 
-          xl:text-4xl xl:text-left">{name}</h1>
+          xl:text-4xl xl:text-left">{product.name}</h1>
           <ProductDetail name={product.name} image={product.img} description={product.description}/>
           <ProductEspecification details={product.details}/>
           <InterestedProductList id={product.id} category={category}/>
