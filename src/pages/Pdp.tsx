@@ -8,6 +8,7 @@ import { BreadcrumbLinks, FeaturedPdpB } from "../utils/BreadcrumbData";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { ProductEspecification } from "../components/ProductEspecification";
 import { InterestedProductList } from "../components/InterestProductList";
+import { useEffect } from "react";
 
 
 type pdpProps={
@@ -17,6 +18,10 @@ type pdpProps={
 }
 
 export function Pdp(){
+  useEffect(() => {
+    window.scrollTo(0, 0); // Desplaza la ventana al inicio
+  });
+
    const {name}=useParams(); 
     const location=useLocation();
    var {id,category,op}:pdpProps= location.state;
