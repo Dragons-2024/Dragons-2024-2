@@ -11,13 +11,13 @@ export const usePdpProduct = ({productId,category,op}:usePlpProductProps) => {
     console.log("hola");
     return useQuery({
       queryKey: ['PdpProduct', productId], // Agregar el productId a la clave de consulta
-      queryFn: ()=>getPdpProductFeatured(productId),
+      queryFn: () => getPdpProductFeatured(productId),
     });
-  }else{
-      return useQuery({
-        queryKey: ['PdpProduct', productId,category], // Agregar el productId a la clave de consulta
-        queryFn: ()=>getPdpProductPlp({id:productId,category}),
-      });
-    }
-  
+  } else {
+    return useQuery({
+      queryKey: ['PdpProduct', productId, category], // Agregar el productId a la clave de consulta
+      queryFn: () => getPdpProductPlp({ id: productId, category }),
+    });
+  }
+
 };
