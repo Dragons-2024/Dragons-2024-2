@@ -21,7 +21,9 @@ export function Header() {
                         <li className="text-white hover:text-blue-500 "><a className="flex items-center gap-2" href="#"><i ></i>
                             <FaUser />
                             Cuenta</a></li>
+                            <Link to="/Cart">
                         <li className="text-white hover:text-blue-500"><a className="flex items-center gap-2" href="#"><i></i><FaShoppingCart />Carrito</a></li>
+                            </Link>
                     </ul>
                 </nav>
             </section>

@@ -1,17 +1,17 @@
 import { axiosApi } from '../api/axios';
-import { FeaturedProductProps } from '../core/interfaces/FeaturedProductsInter';
+import { PlpProductProps } from '../core/interfaces/PlpProductInter';
 
 type pdpProps={
   id:number;
   category:String;
 }
 
-export const getPdpProductFeatured = async (id:number): Promise<FeaturedProductProps> => {
+export const getPdpProductFeatured = async (id:number): Promise<PlpProductProps> => {
   const response = await axiosApi.get(`https://dragons-2024-2-api.onrender.com/featuredproducts/${id}`);
   return response.data;
 };
 
-export const getPdpProductPlp = async ({id,category}:pdpProps): Promise<FeaturedProductProps> => {
+export const getPdpProductPlp = async ({id,category}:pdpProps): Promise<PlpProductProps> => {
   const response = await axiosApi.get(`https://dragons-2024-2-api.onrender.com/${category}/${id}`);
   return response.data;
 };

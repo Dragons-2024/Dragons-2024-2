@@ -1,9 +1,5 @@
 
-
-
-
-
- export interface FeaturedProductProps {
+export interface PlpProductProps {
     id: number;
     image: string;
     name: string;
@@ -12,11 +8,13 @@
     discount: string;
     slug: string;
     description:string;
-
+    details:{
+     [key:string]:string;
+    }
   }
 
 
-  export interface FeaturedProductsListProps {
+  export interface  PlpProductsListProps {
     products: {
       id: number;
       name: string;
@@ -26,7 +24,9 @@
       image: string;
       slug: string;
       description:string;
+      details:{
+        [key:string]:string;
+       }
     }[];
   }
     
-
