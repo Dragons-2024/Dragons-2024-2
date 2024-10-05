@@ -1,15 +1,15 @@
-// src/components/ProductGrid.tsx
+
 import React from 'react';
 import ProductItem from './ProductItem';
 
 type Product = {
   id: number;
   name: string;
-  price: number; // Este será el precio normal
-  image: string; // Este será la imagen
-  features: string; // Lo mapearemos a features
+  price: number; 
+  image: string; 
+  features: string; 
   rating: number;
-  discountedPrice: string; // Precio con descuento
+  discountedPrice: string; 
 };
 
 type ProductGridProps = {
@@ -22,12 +22,12 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
       {products.map((product) => (
         <ProductItem
         key={product.id}
-        img={product.image} // Mapea la prop image a img
+        img={product.image} 
         name={product.name}
         rating={product.rating}
-        features={product.features} // Mapea la prop description a features
-        normalPrice={`$${product.price}`} // Formateamos el precio
-        discountedPrice={product.discountedPrice} // Precio con descuento
+        features={product.features} 
+        normalPrice={`$${product.price}`} 
+        discountedPrice={product.discountedPrice} 
         />
       ))}
     </div>

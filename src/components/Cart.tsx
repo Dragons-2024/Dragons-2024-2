@@ -4,7 +4,6 @@ import { Breadcrumb } from "../components/Breadcrumb";
 import { BreadcrumbLinks, AddCartToBreadcrumb } from "../utils/BreadcrumbData";
 
 
-// Interfaz para los productos del carrito
 interface Product {
   id: number;
   name: string;
@@ -13,7 +12,7 @@ interface Product {
   price: number;
 }
 
-// Interfaz del Carrito de Compras
+
 interface Cart {
   products: Product[];
   subtotal: number;
@@ -22,7 +21,6 @@ interface Cart {
   discount: number;
 }
 
-// Estado inicial del carrito de compras
 const initialCart: Cart = {
   products: [
     {
@@ -52,15 +50,14 @@ const initialCart: Cart = {
   ],
   subtotal: 0,
   taxes: 0,
-  shipping: 10000, // Costo de envío simulado
-  discount: 5000, // Descuento simulado
+  shipping: 10000, 
+  discount: 5000, 
 };
 
 export const Cart = () => {
   const [cart, setCart] = useState<Cart>(initialCart);
   const [shippingMethod, setShippingMethod] = useState<string>("Express");
 
-  // Función para cambiar la cantidad de productos
   const handleQuantityChange = (id: number, newQuantity: number) => {
     setCart((prevCart) => ({
       ...prevCart,
@@ -70,7 +67,6 @@ export const Cart = () => {
     }));
   };
 
-  // Función para eliminar un producto
   const handleRemoveProduct = (id: number) => {
     setCart((prevCart) => ({
       ...prevCart,
@@ -78,7 +74,7 @@ export const Cart = () => {
     }));
   };
 
-  // Calcular el subtotal dinámicamente
+
   const calculateSubtotal = () => {
     return cart.products.reduce(
       (acc, product) => acc + product.price * product.quantity,
@@ -86,10 +82,9 @@ export const Cart = () => {
     );
   };
 
-  // Calcular total
   const calculateTotal = () => {
     const subtotal = calculateSubtotal();
-    const taxes = subtotal * 0.15; // Impuesto simulado al 15%
+    const taxes = subtotal * 0.15;
     return subtotal + taxes + cart.shipping - cart.discount;
   };
 
@@ -105,8 +100,6 @@ export const Cart = () => {
             Carrito de Compras
           </h1>
         </section>
-
-        {/* Selección de método de envío general */}
         <section className="mt-8">
           <h2 className="font-poppins text-xl font-semibold text-blue-600 mb-6">
             Método de envío
@@ -146,7 +139,6 @@ export const Cart = () => {
         </section>
 
         <div className="font-poppins flex flex-col md:flex-row items-start mb-4 md:space-x-10 mt-8">
-          {/* Listado de productos */}
           <section className="w-full md:w-3/5 bg-white rounded-lg space-y-2">
             {cart.products.map((product) => (
               <div
@@ -194,7 +186,6 @@ export const Cart = () => {
                       </button>
                     </div>
                     <div>
-                      {/* Precio total basado en la cantidad */}
                       <p className="text-blue-900 text-lg font-semibold">
                         Precio: $
                         {(product.price * product.quantity).toLocaleString(
@@ -207,8 +198,6 @@ export const Cart = () => {
               </div>
             ))}
           </section>
-
-          {/* Resumen de compra */}
           <section className="mt-8 mb-2 md:mt-0 w-full md:w-2/5 border p-4 border-blue-600 rounded-lg bg-white">
             <h2 className="text-2xl font-semibold text-blue-600 mb-4">
               Resumen de compra
