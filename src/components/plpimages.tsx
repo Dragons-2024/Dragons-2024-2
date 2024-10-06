@@ -3,17 +3,7 @@ import ErrorMessage from './ErrorMessage';
 import { Loading } from './Loading';
 import { useProductsBycategory } from '../hooks/useProducts';
 import ProductItem from './ProductItem';
-import { CategoryProducts } from '../services/subcategories';
-
-// interface Product {
-//   id: string;
-//   img: string;
-//   name: string;
-//   rating: number;
-//   features: string;
-//   normalPrice: string;
-//   discountedPrice: string;
-// }
+import { CategoryProducts } from '../services/categoriesService';
 
 interface PlpImagesProps {
   category: string;
