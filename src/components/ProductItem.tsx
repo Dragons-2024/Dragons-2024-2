@@ -1,17 +1,8 @@
 import React from 'react';
 import star from '../assets/star.svg'; // Asegúrate de que la ruta sea correcta
 import { Link } from 'react-router-dom';
-import { CategoryProducts } from '../services/subcategories';
+import { CategoryProducts } from '../services/categoriesService';
 
-// interface ProductItemProps {
-//   img: string;
-//   name: string;
-//   rating: number;
-//   features: string;
-//   normalPrice: string;
-//   discountedPrice: string;
-//   description?:string;
-// }
 
 const ProductItem: React.FC<CategoryProducts> = ({id, img, name, rating, features, normalPrice, discountedPrice,slug,category }) => {
   return (

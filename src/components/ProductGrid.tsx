@@ -1,21 +1,7 @@
 
 import React from 'react';
 import ProductItem from './ProductItem';
-import { CategoryProducts } from '../services/subcategories';
-
-// type Product = {
-//   id: number;
-//   name: string;
-//   price: number; 
-//   image: string; 
-//   features: string; 
-//   rating: number;
-//   discountedPrice: string; 
-// };
-
-// type ProductGridProps = {
-//   products: Product[];
-// };
+import { CategoryProducts } from '../services/categoriesService';
 
 const ProductGrid: React.FC<CategoryProducts[]> = (products) => {
   return (
